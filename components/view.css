@@ -1,0 +1,33 @@
+.view { clear: both; }
+.view-header {
+	clear: both;
+	margin: 1.5rem 0;
+	padding-left: .9375rem;
+	padding-right: .9375rem;
+}
+.view-title {
+	color: #3498db;
+	margin-bottom: 0;
+}
+.view-title small {
+	color: #bdc3c7;
+	display: block;
+	font-size: .7em;
+	margin-top: .25rem;
+	padding-left: 0;
+}
+.view-footer {
+	clear: both;
+	padding: 1.5rem .9375rem;
+}
+
+@media (min-width: 992px) {
+	.view-title small {
+		display: inline;
+		margin-top: 0;
+		padding-left: .5rem;
+	}
+	.view-footer {
+		padding: 3rem 0;
+	}
+}

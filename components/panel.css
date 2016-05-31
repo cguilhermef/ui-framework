@@ -1,0 +1,67 @@
+.p4nel {
+  clear: both;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.p4nel.highlight {
+  background-color: #f0f0f0;
+  padding: 1rem;
+}
+.p4nel.last {
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 1rem;
+}
+.p4nel .p4nel {
+  margin-bottom: 0;
+  padding-top: .9375rem;
+}
+.p4nel-header {
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.p4nel-body {
+  clear: both;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+}
+.p4nel .p4nel .p4nel-body {
+  padding-left: 0;
+  padding-right: 0;
+}
+.p4nel-title {
+  color: #3498db;
+  display: block;
+  font-size: inherit;
+  padding: 0 .9375rem .2rem;
+  width: 100%;
+}
+.p4nel-title:focus,
+.p4nel-title:hover,
+.p4nel-title:active {
+  color: #3498db;
+}
+.p4nel .p4nel .p4nel-title {
+  padding-left: 0;
+  padding-right: 0;
+}
+/*.p4nel-body {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}*/
+.p4nel.collapsible > .p4nel-header .p4nel-title::after {
+  content: "\f053";
+  float: right;
+	font: normal normal normal 1em/1em FontAwesome;
+  position: relative;;
+  margin-top: .15em;
+  transform: rotate(-90deg);
+  transition: all .2s;
+  top: -50%;
+}
+.p4nel.collapsible > .p4nel-header .p4nel-title.collapsed::after {
+  transform: rotate(0);
+}
+.p4nel.collapsible > .p4nel-header .p4nel-title {
+  cursor: pointer;
+}

@@ -1,0 +1,63 @@
+html,
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 15px;
+	line-height: 24px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  margin-bottom: .8rem;
+}
+
+.small-text,
+.light-text {
+	font-size: 13px;
+	line-height: 1rem;
+}
+.light-text {
+  opacity: .8;
+}
+.fwb { font-weight: 600; }
+.fwl { font-weight: 300; }
+.fsi { font-style: italic;}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+}
+h3 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+h4 {
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: 1.6rem;
+}
+h5 {
+  font-size: 1.1333rem;
+  font-weight: 600;
+  line-height: 1.2rem;
+}
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1rem;
+}
+
+@media (min-width: 544px) { /* md */
+  h2 { line-height: 3.2rem; }
+  h3 { line-height: 2rem; }
+  h4 { line-height: 2rem;}
+  h5 { line-height: 1.6rem; }
+  h6 { line-height: 1rem; }
+}
+
+/*.btn {
+	font-size: .8666rem;
+	font-weight: 600;
+}*/

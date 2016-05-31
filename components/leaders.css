@@ -1,0 +1,57 @@
+.leaders {
+	list-style: none;
+	padding: 0;
+}
+.leaders-item {
+	float: left;
+	margin-bottom: .8em;
+	position: relative;
+	width: 100%;
+}
+.leaders-item:before {
+	background-image: linear-gradient(90deg, transparent 3px, #c0c0c0 1px);
+  background-size: 4px 1px;
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  bottom: .3rem;
+	content: " ";
+	height: 2px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 0;
+}
+.leaders-label {
+	background-color: #fff;
+	color: #333;
+	float: left;
+	padding-right: .9em;
+	position: relative;
+	z-index: 2;
+}
+.leaders-value {
+	background-color: #fff;
+	color: #222;
+	font-weight: 600;
+	padding-left: .9em;
+	position: absolute;
+	right: 0;
+	text-align: right;
+	z-index: 1;
+}
+.leaders-value .unity {
+	float: left;
+	padding-left: 0;
+	padding-right: .3rem;
+}
+.leaders-value .value {
+	float: left;
+}
+.leaders .unity + .value {
+	float: right;
+}
+.leaders .value + .unity {
+	float: right;
+	padding-left: .3rem;
+	padding-right: 0;
+}

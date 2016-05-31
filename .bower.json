@@ -1,0 +1,19 @@
+{
+  "name": "ui-framework",
+  "version": "0.1.0",
+  "homepage": "https://github.com/zeta-labs/ui-framework",
+  "authors": [
+    "Theo Renck <carlos.renck@zeta.com.br>"
+  ],
+  "description": "Basics components to build webclient interfaces",
+  "keywords": [
+    "css",
+    "framework",
+    "ui"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+  ]
+}

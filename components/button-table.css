@@ -1,0 +1,16 @@
+.button-table {
+  display: table;
+  width: 100%;
+}
+.button-cell {
+  display: table-cell;
+}
+.button-cell + .button-cell {
+  padding-left: 2px;
+}
+.button-cell .btn {
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+}

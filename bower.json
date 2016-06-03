@@ -1,10 +1,14 @@
 {
   "name": "ui-framework",
-  "version": "0.2.1",
+  "version": "0.2.1.1",
   "homepage": "https://github.com/zeta-labs/ui-framework",
   "authors": [
     "Theo Renck <carlos.renck@zeta.com.br>"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zeta-labs/ui-framework.git"
+  },
   "directory": "bower_components",
   "description": "Basics components to build webclient interfaces",
   "keywords": [
@@ -14,10 +18,18 @@
   ],
   "license": "MIT",
   "ignore": [
+    "**/.*",
     "node_modules",
-    "bower_components",
     "test",
-    "tests"
+    "src",
+    ".editorconfig",
+    ".gitignore",
+    ".gitattributes",
+    ".jshintrc",
+    ".travis.yml",
+    "Gruntfile.js",
+    "package.json",
+    "index.html"
   ],
-  "main": "dist/ui-framework.min.css"
+  "main": "dist/ui-framework.css"
 }

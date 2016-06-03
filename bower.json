@@ -19,6 +19,5 @@
     "test",
     "tests"
   ],
-  "main": "dist/ui-framework.min.css",
-  "private": true
+  "main": "dist/ui-framework.min.css"
 }

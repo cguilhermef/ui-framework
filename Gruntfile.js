@@ -106,6 +106,11 @@ module.exports = function (grunt) {
           ext: '.min.css'
         }]
       }
+    },
+    filerev: {
+      dist: {
+        src: ['dist/*.css','dev/**/*.css']
+      }
     }
   });
   grunt.registerTask('dist', [
@@ -128,4 +133,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-postcss');
+  grunt.loadNpmTasks('grunt-filerev');
 };

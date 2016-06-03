@@ -1,6 +1,7 @@
 .button-table {
   border-collapse: separate;
 	border-spacing: 2px 0;
+  clear: both;
   display: table;
 	position: relative;
   width: 100%;

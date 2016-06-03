@@ -16,10 +16,9 @@
   "ignore": [
     "node_modules",
     "bower_components",
-    "**/.*",
     "test",
     "tests"
   ],
-  "main": "dist/ui-framework.css",
+  "main": "dist/ui-framework.min.css",
   "private": true
 }

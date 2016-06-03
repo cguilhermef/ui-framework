@@ -20,6 +20,7 @@
 .half-m-y, .half-m-y-xs {
   margin-bottom: .5rem !important;
   margin-top: .5rem !important;
+  border: none;
 }
 .half-m-x, .half-m-x-xs {
   margin-left: .5rem !important;

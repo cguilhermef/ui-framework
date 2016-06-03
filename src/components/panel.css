@@ -45,10 +45,6 @@
   padding-left: 0;
   padding-right: 0;
 }
-/*.p4nel-body {
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-}*/
 .p4nel.collapsible > .p4nel-header .p4nel-title::after {
   content: "\f053";
   float: right;
@@ -64,4 +60,16 @@
 }
 .p4nel.collapsible > .p4nel-header .p4nel-title {
   cursor: pointer;
+}
+.p4nel.inverse {
+	background-color: whitesmoke;
+}
+.p4nel.boxed {
+	border: 1px solid #eaeaea;
+	padding: 1rem;
+}
+.p4nel.boxed > .p4nel-body,
+.p4nel.boxed > .p4nel-header .p4nel-title {
+	padding-left: 0;
+	padding-right: 0;
 }

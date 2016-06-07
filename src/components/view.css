@@ -11,7 +11,7 @@
 }
 .view-title small {
 	color: #bdc3c7;
-	display: block;
+	float: right;
 	font-size: .7em;
 	margin-top: .25rem;
 	padding-left: 0;
@@ -20,10 +20,63 @@
 	clear: both;
 	padding: 1.5rem .9375rem;
 }
+.view-menu {
+	clear: both;
+}
+.view-menu-header {
+	border-bottom: 1px solid #eaeaea;
+	font-size: 1rem;
+	font-weight: 600;
+	padding: .35rem;
+}
+.view-menu-title {
+	display: block;
+	font-family: 'Open Sans', sans-serif;
+	width: 100%;
+}
+.view-menu-title,
+.view-menu-title:hover,
+.view-menu-title:visited,
+.view-menu-title:active,
+.view-menu-title:focus {
+	color: #373a3c;
+}
+.view-menu-title::after {
+	content: "\f053";
+  float: right;
+	font: normal normal normal 1em/1em FontAwesome;
+  position: relative;;
+  margin-top: .25em;
+  transform: rotate(-90deg);
+  transition: all .2s;
+  top: -50%;
+}
+.view-menu-title.collapsed::after {
+	transform: rotate(0);
+}
+.view-menu-item {
+	border-bottom: 1px solid #eaeaea;
+	padding: .65rem;
+	width: 100%;
+}
+.view-menu-link {
+	display: block;
+	width: 100%;
+}
+.view-menu-link,
+.view-menu-link:visited,
+.view-menu-link:active,
+.view-menu-link:hover {
+	color: #3498db;
+}
+.view-menu-item.active {
+	background-color: #f0f0f0;
+}
 
 @media (min-width: 992px) {
 	.view-title small {
 		display: inline;
+		float: none;
 		margin-top: 0;
 		padding-left: .5rem;
 	}

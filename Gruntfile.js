@@ -20,7 +20,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     watch: {
       styles: {
-        files: ['src/*.css'],
+        files: ['src/**/.css'],
         tasks: ['build']
       },
       gruntfile: {
@@ -126,7 +126,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dev', [
     'clean:dev',
     'concat:dev',
-    'watch'
+    'watch:styles'
   ]);
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-clean');

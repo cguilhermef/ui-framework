@@ -21,7 +21,10 @@ module.exports = function (grunt) {
     watch: {
       styles: {
         files: ['src/**/.css'],
-        tasks: ['build']
+        tasks: ['build'],
+        options: {
+          livereload: 9666
+        }
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -43,6 +46,15 @@ module.exports = function (grunt) {
             'dev/*'
           ]
         }]
+      }
+    },
+    connect: {
+      server: {
+        options: {
+          port: 9001,
+          base: './',
+          livereload: 9666
+        }
       }
     },
     concat: {
@@ -126,12 +138,14 @@ module.exports = function (grunt) {
   grunt.registerTask('dev', [
     'clean:dev',
     'concat:dev',
+    'connect',
     'watch:styles'
   ]);
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-filerev');
 };

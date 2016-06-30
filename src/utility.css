@@ -410,35 +410,43 @@
 .-clear-xs {
   clear: none !important;
 }
-.text-right,
-.text-right-xs {
-  text-align: right !important;
-}
 .text-left,
 .text-left-xs {
   text-align: left !important;
+}
+.text-center,
+.text-center-xs {
+  text-align: center !important;
+}
+.text-right,
+.text-right-xs {
+  text-align: right !important;
 }
 @media (min-width: 544px) {
   .clear-sm { clear: both !important;}
   .-clear-sm { clear: none !important;}
   .text-left-sm { text-align: left !important;}
+  .text-center-sm { text-align: center !important;}
   .text-right-sm { text-align: right !important;}
 }
 @media (min-width: 768px) {
   .clear-md { clear: both !important;}
   .-clear-md { clear: none !important;}
   .text-left-md { text-align: left !important;}
+  .text-center-md { text-align: center !important;}
   .text-right-md { text-align: right !important;}
 }
 @media (min-width: 992px) {
   .clear-lg { clear: both !important;}
   .-clear-lg { clear: none !important;}
   .text-left-lg { text-align: left !important;}
+  .text-center-lg { text-align: center !important;}
   .text-right-lg { text-align: right !important;}
 }
 @media (min-width: 1200px) {
   .clear-xl { clear: both !important;}
   .-clear-xl { clear: none !important;}
   .text-left-xl { text-align: left !important;}
+  .text-center-xl { text-align: center !important;}
   .text-right-xl { text-align: right !important;}
 }

@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
 	font-family: "Open Sans", sans-serif;
 	font-size: 15px;
 	line-height: 24px;
@@ -16,12 +15,15 @@ p {
 	font-size: 13px;
 	line-height: 1rem;
 }
-.light-text {
-  opacity: .8;
-}
+.light-text { opacity: .8; }
+
 .fwb { font-weight: 600; }
 .fwl { font-weight: 300; }
 .fsi { font-style: italic;}
+
+.highlight-text { color: #3498db }
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
 
 h2 {
   font-size: 2rem;
@@ -56,8 +58,3 @@ h6 {
   h5 { line-height: 1.6rem; }
   h6 { line-height: 1rem; }
 }
-
-/*.btn {
-	font-size: .8666rem;
-	font-weight: 600;
-}*/

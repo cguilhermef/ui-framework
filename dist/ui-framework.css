@@ -26,7 +26,7 @@
 .btn-cell-2,
 .btn-cell-xs-2 { width: 66.66666%; }
 .btn-cell-3,
-.btn-cell-xs-3 { width: 100%; }
+.btn-cell-xs-3 { width: calc(100% - 2px); }
 .btn-cell-1 .fa,
 .btn-cell-2 .fa { display: block }
 .btn-cell-offset-0,
@@ -145,12 +145,15 @@
 
 .list-table { clear: both; }
 .list-table-header {
-	border-bottom: 1px solid #eaeaea;
 	float: left;
 	padding-bottom: 1rem;
 	width: 100%;
 }
 .list-table-header .header { font-weight: 600; }
+.list-table-body {
+	border-top: 1px solid #eaeaea;
+	clear: both;
+}
 .list-table-item {
 	border-bottom: 1px solid #eaeaea;
 	clear: both;
@@ -159,7 +162,8 @@
 	padding-top: 1rem;
 	width: 100%;
 }
-.list-table-item:nth-child(2n+1) {
+.list-table-body .list-table-item:last-child { border-bottom: none; }
+.list-table-body .list-table-item:nth-child(2n+1) {
 	background-color: whitesmoke;
 }
 .list-table.inverse .list-table-item {

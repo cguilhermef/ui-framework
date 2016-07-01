@@ -26,7 +26,7 @@
 .btn-cell-2,
 .btn-cell-xs-2 { width: 66.66666%; }
 .btn-cell-3,
-.btn-cell-xs-3 { width: 100%; }
+.btn-cell-xs-3 { width: calc(100% - 2px); }
 .btn-cell-1 .fa,
 .btn-cell-2 .fa { display: block }
 .btn-cell-offset-0,

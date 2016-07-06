@@ -32,7 +32,7 @@
 .btn-cell-boxed .fa,
 .btn-cell-boxed-xs .fa { display: block !important; }
 .btn-cell-slim .fa,
-.btn-cell-slim-xs .fa { display: inline !important; }
+.btn-cell-slim-xs .fa { display: inline-block !important; }
 .btn-cell-offset-0,
 .btn-cell-offset-xs-0 { margin-left: 0 !important; }
 .btn-cell-offset-1,
@@ -48,7 +48,7 @@
   .btn-cell-offset-sm-1 { margin-left: calc(33.33333% - 4px) !important; }
   .btn-cell-offset-sm-2 { margin-left: calc(66.66666% - 4px) !important; }
   .btn-cell-boxed-sm .fa { display: block !important; }
-  .btn-cell-slim-sm .fa { display: inline !important; }
+  .btn-cell-slim-sm .fa { display: inline-block !important; }
 }
 @media (min-width: 768px) {
   .btn-cell-md-1 { width: 33.33333% !important; }
@@ -58,7 +58,7 @@
   .btn-cell-offset-md-1 { margin-left: calc(33.33333% - 4px) !important; }
   .btn-cell-offset-md-2 { margin-left: calc(66.66666% - 4px) !important; }
   .btn-cell-boxed-md .fa { display: block !important; }
-  .btn-cell-slim-md .fa { display: inline !important; }
+  .btn-cell-slim-md .fa { display: inline-block !important; }
 }
 @media (min-width: 992px) {
   .btn-table {
@@ -70,7 +70,7 @@
     padding-left: 2px;
     padding-right: 2px;
   }
-  .btn-cell .fa { display: inline !important; }
+  .btn-cell .fa { display: inline-block !important; }
   .btn-cell-lg-1 { width: 33.33333% !important; }
   .btn-cell-lg-2 { width: 66.66666% !important; }
   .btn-cell-lg-3 { width: 100% !important; }
@@ -78,7 +78,7 @@
   .btn-cell-offset-lg-1 { margin-left: calc(33.33333% - 4px) !important; }
   .btn-cell-offset-lg-2 { margin-left: calc(66.66666% - 4px) !important; }
   .btn-cell-boxed-lg .fa { display: block !important; }
-  .btn-cell-slim-lg .fa { display: inline !important; }
+  .btn-cell-slim-lg .fa { display: inline-block !important; }
 }
 @media (min-width: 1200px) {
   .btn-cell-xl-1 { width: 33.33333% !important; }
@@ -88,7 +88,7 @@
   .btn-cell-offset-xl-1 { margin-left: calc(33.33333% - 4px) !important; }
   .btn-cell-offset-xl-2 { margin-left: calc(66.66666% - 4px) !important; }
   .btn-cell-boxed-xl .fa { display: block !important; }
-  .btn-cell-slim-xl .fa { display: inline !important; }
+  .btn-cell-slim-xl .fa { display: inline-block !important; }
 }
 
 .leaders {

@@ -1,0 +1,21 @@
+/**
+Caso de uso:
+
+<dl class="info-pairs small-text half-m-t -m-t-lg">
+  <dt class="info-pairs-key">NCM</dt>
+  <dd class="info-pairs-value">{{item.ncm | regexp:'(\\d{4})(\\d{2})(\\d{2})':'$1.$2.$3'}}</dd>
+  <dt class="info-pairs-key">CFOP</dt>
+  <dd class="info-pairs-value">{{item.cfop | regexp:'(\\d{1})(\\d{3})':'$1.$2'}}</dd>
+  <dt class="info-pairs-key">CST</dt>
+  <dd class="info-pairs-value">{{item.imposto.icms.situacao_tributaria}}</dd>
+</dl>
+
+**/
+.info-pairs {
+	clear: both;
+	margin: 0;
+}
+.info-pairs-key,
+.info-pairs-value { display: inline-block; }
+.info-pairs-key { font-weight: bold; }
+.info-pairs-value + .info-pairs-key { margin-left: .5rem; }

@@ -1,4 +1,7 @@
-.list-table { clear: both; }
+.list-table {
+	clear: both;
+	--border: 1px solid #eaeaea;
+}
 .list-table-header {
 	float: left;
 	padding-bottom: 1rem;
@@ -17,13 +20,14 @@
 	padding-top: 1rem;
 	width: 100%;
 }
-.list-table-body .list-table-item:last-child { border-bottom: none; }
+.list-table-item.highlight,
 .list-table-body .list-table-item:nth-child(2n+1) {
 	background-color: whitesmoke;
 }
 .list-table.inverse .list-table-item {
 	border-bottom: 1px solid #eaeaea;
 }
+.list-table.inverse .list-table-item.highlight,
 .list-table.inverse .list-table-item:nth-child(2n+1) {
 	background-color: #fafafa;
 }

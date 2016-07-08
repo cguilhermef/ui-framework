@@ -150,7 +150,10 @@
 }
 .leaders.condensed .leaders-item { margin-bottom: 0}
 
-.list-table { clear: both; }
+.list-table {
+	clear: both;
+	--border: 1px solid #eaeaea;
+}
 .list-table-header {
 	float: left;
 	padding-bottom: 1rem;
@@ -169,13 +172,14 @@
 	padding-top: 1rem;
 	width: 100%;
 }
-.list-table-body .list-table-item:last-child { border-bottom: none; }
+.list-table-item.highlight,
 .list-table-body .list-table-item:nth-child(2n+1) {
 	background-color: whitesmoke;
 }
 .list-table.inverse .list-table-item {
 	border-bottom: 1px solid #eaeaea;
 }
+.list-table.inverse .list-table-item.highlight,
 .list-table.inverse .list-table-item:nth-child(2n+1) {
 	background-color: #fafafa;
 }
@@ -475,6 +479,20 @@ h6 {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+/**
+O utility de bordas só está disponível nos elementos que
+fornecem a variável --border no elemento pai do componente.
+**/
+.b, .b-xs { border: var(--border) !important; }
+.b-t, .b-t-xs { border-top: var(--border) !important; }
+.b-r, .b-r-xs { border-right: var(--border) !important; }
+.b-b, .b-b-xs { border-bottom: var(--border) !important; }
+.b-l, .b-l-xs { border-left: var(--border) !important; }
+.-b, .-b-xs { border: none !important; }
+.-b-t, .-b-t-xs { border-top: none !important; }
+.-b-r, .-b-r-xs { border-right: none !important; }
+.-b-b, .-b-b-xs { border-bottom: none !important; }
+.-b-l, .-b-l-xs { border-left: none !important; }
 
 @media (min-width: 544px) { /* sm */
   .m-sm { margin: 1rem !important; }
@@ -555,6 +573,18 @@ h6 {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+
+  .b-sm { border: var(--border) !important; }
+  .b-t-sm { border-top: var(--border) !important; }
+  .b-r-sm { border-right: var(--border) !important; }
+  .b-b-sm { border-bottom: var(--border) !important; }
+  .b-l-sm { border-left: var(--border) !important; }
+  .-b-sm { border: none !important; }
+  .-b-t-sm { border-top: none !important; }
+  .-b-r-sm { border-right: none !important; }
+  .-b-b-sm { border-bottom: none !important; }
+  .-b-l-sm { border-left: none !important; }
+
 }
 @media (min-width: 768px) { /* md */
   .m-md { margin: 1rem !important; }
@@ -635,6 +665,17 @@ h6 {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }
+
+  .b-md { border: var(--border) !important; }
+  .b-t-md { border-top: var(--border) !important; }
+  .b-r-md { border-right: var(--border) !important; }
+  .b-b-md { border-bottom: var(--border) !important; }
+  .b-l-md { border-left: var(--border) !important; }
+  .-b-md { border: none !important; }
+  .-b-t-md { border-top: none !important; }
+  .-b-r-md { border-right: none !important; }
+  .-b-b-md { border-bottom: none !important; }
+  .-b-l-md { border-left: none !important; }
 }
 @media (min-width: 992px) { /* lg */
   .m-lg { margin: 1rem !important; }
@@ -715,6 +756,16 @@ h6 {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+  .b-lg { border: var(--border) !important; }
+  .b-t-lg { border-top: var(--border) !important; }
+  .b-r-lg { border-right: var(--border) !important; }
+  .b-b-lg { border-bottom: var(--border) !important; }
+  .b-l-lg { border-left: var(--border) !important; }
+  .-b-lg { border: none !important; }
+  .-b-t-lg { border-top: none !important; }
+  .-b-r-lg { border-right: none !important; }
+  .-b-b-lg { border-bottom: none !important; }
+  .-b-l-lg { border-left: none !important; }
 }
 @media (min-width: 1200px) { /* xl */
   .m-xl { margin: 1rem !important; }
@@ -795,6 +846,16 @@ h6 {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+  .b-xl { border: var(--border) !important; }
+  .b-t-xl { border-top: var(--border) !important; }
+  .b-r-xl { border-right: var(--border) !important; }
+  .b-b-xl { border-bottom: var(--border) !important; }
+  .b-l-xl { border-left: var(--border) !important; }
+  .-b-xl { border: none !important; }
+  .-b-t-xl { border-top: none !important; }
+  .-b-r-xl { border-right: none !important; }
+  .-b-b-xl { border-bottom: none !important; }
+  .-b-l-xl { border-left: none !important; }
 }
 
 .clear,

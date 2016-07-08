@@ -20,14 +20,6 @@
 	padding-top: 1rem;
 	width: 100%;
 }
-.list-table-item.highlight,
-.list-table-body .list-table-item:nth-child(2n+1) {
-	background-color: whitesmoke;
-}
-.list-table.inverse .list-table-item {
-	border-bottom: 1px solid #eaeaea;
-}
-.list-table.inverse .list-table-item.highlight,
-.list-table.inverse .list-table-item:nth-child(2n+1) {
-	background-color: #fafafa;
-}
+.list-table-item.highlight { background-color: whitesmoke; }
+.list-table.inverse .list-table-item { border-bottom: 1px solid #eaeaea; }
+.list-table.inverse .list-table-item.highlight { background-color: #fafafa; }

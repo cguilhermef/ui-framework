@@ -1,4 +1,7 @@
-.view { clear: both; }
+.view {
+	--border: 1px solid #eaeaea;
+	clear: both;
+}
 .view-header {
 	clear: both;
 	margin: 1.5rem 0;

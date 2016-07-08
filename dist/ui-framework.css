@@ -92,6 +92,7 @@
 }
 
 .leaders {
+	--border: 1px solid #eaeaea;
 	list-style: none;
 	padding: 0;
 }
@@ -151,8 +152,8 @@
 .leaders.condensed .leaders-item { margin-bottom: 0}
 
 .list-table {
-	clear: both;
 	--border: 1px solid #eaeaea;
+	clear: both;
 }
 .list-table-header {
 	float: left;
@@ -185,6 +186,7 @@
 }
 
 .p4nel {
+  --border: 1px solid #eaeaea;
   clear: both;
   margin-bottom: 2rem;
   width: 100%;
@@ -260,7 +262,10 @@
 	padding-right: 0;
 }
 
-.view { clear: both; }
+.view {
+	--border: 1px solid #eaeaea;
+	clear: both;
+}
 .view-header {
 	clear: both;
 	margin: 1.5rem 0;

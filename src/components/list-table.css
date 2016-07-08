@@ -1,6 +1,6 @@
 .list-table {
-	clear: both;
 	--border: 1px solid #eaeaea;
+	clear: both;
 }
 .list-table-header {
 	float: left;

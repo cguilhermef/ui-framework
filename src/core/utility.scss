@@ -80,10 +80,6 @@
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
-/**
-O utility de bordas só está disponível nos elementos que
-fornecem a variável --border no elemento pai do componente.
-**/
 .b, .b-xs { border: var(--border) !important; }
 .b-t, .b-t-xs { border-top: var(--border) !important; }
 .b-r, .b-r-xs { border-right: var(--border) !important; }

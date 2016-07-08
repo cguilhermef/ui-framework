@@ -123,29 +123,30 @@ module.exports = function (grunt) {
       dist: {
         src: ['dist/*.css','dev/**/*.css']
       }
+    },
+    sass: {                              // Task
+      dist: {                            // Target
+        options: {                       // Target options
+          style: 'compact'
+        },
+        files: {                         // Dictionary of files
+          'dist/ui-framework.css': 'src/ui-framework.scss'// 'destination': 'source'
+        }
+      }
     }
   });
-  grunt.registerTask('dist', [
+  grunt.registerTask('build', [
     'clean:dist',
-    'concat:dist',
+    'sass:dist',
     'postcss:dist',
     'cssmin'
-  ]);
-  grunt.registerTask('build', [
-    'clean:dev',
-    'concat:dev'
-  ]);
-  grunt.registerTask('dev', [
-    'clean:dev',
-    'concat:dev',
-    'connect',
-    'watch:styles'
   ]);
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-filerev');
 };

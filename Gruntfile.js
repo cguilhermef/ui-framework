@@ -26,6 +26,10 @@ module.exports = function (grunt) {
           livereload: 9666
         }
       },
+      sass: {
+        files: ['src/**/*.scss'],
+        tasks: ['pre-build']
+      },
       gruntfile: {
         files: ['Gruntfile.js']
       }
@@ -55,16 +59,6 @@ module.exports = function (grunt) {
           base: './',
           livereload: 9666
         }
-      }
-    },
-    concat: {
-      dist: {
-        src: ['src/**/*.css'],
-        dest: 'dist/ui-framework.css'
-      },
-      dev: {
-        src: ['src/**/*.css'],
-        dest: 'dev/ui-framework.css'
       }
     },
     // Add vendor prefixed styles
@@ -133,6 +127,22 @@ module.exports = function (grunt) {
           'dist/ui-framework.css': 'src/ui-framework.scss'// 'destination': 'source'
         }
       }
+    },
+    csslint: {
+      src: ['dist/*.css'],
+      options: {
+        'important': false,
+        // desconsiderado por conta dos utilities que
+        //utilizam important para sobrescrever os estilos
+        'adjoining-classes': false,
+        // desconsiderado pois é um warning relacionado a incompatibilidade com IE6
+        'unique-headings': false,
+        // desconsiderado - warning por conta de uma definição OOCSS, de que os
+        // headings devem ter o mesmo estilo sempre - e no ui-framework temos
+        // font-size e line-height diferentes para larguras de tela menores.
+        'font-sizes': false
+        //desconsiderado, pois invariavelmente os componentes terão diferentes fontes.
+      }
     }
   });
   grunt.registerTask('build', [
@@ -141,12 +151,19 @@ module.exports = function (grunt) {
     'postcss:dist',
     'cssmin'
   ]);
-  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.registerTask('pre-build', [
+    'clean:dist',
+    'sass:dist'
+  ]);
+  grunt.registerTask('dev', [
+    'watch:sass'
+  ]);
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-filerev');
 };

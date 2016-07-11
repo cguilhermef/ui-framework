@@ -1,0 +1,13 @@
+@import "_variables.scss";
+
+
+@mixin make-breakpoint($resolution) {
+  $res: map-get($resolution-list, $resolution);
+  @if $res != 0 {
+    @media (min-width: #{$res}) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+};

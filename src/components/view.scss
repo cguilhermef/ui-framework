@@ -1,5 +1,5 @@
 .view {
-	--border: 1px solid #eaeaea;
+	--border: #{ 1px solid $border-color };
 	clear: both;
 }
 .view-header {
@@ -25,7 +25,7 @@
 }
 .view-menu { clear: both; }
 .view-menu-header {
-	border-bottom: 1px solid #eaeaea;
+	border-bottom: 1px solid $border-color;
 	font-size: 1rem;
 	font-weight: 600;
 	padding: .35rem 0;
@@ -53,7 +53,7 @@
 }
 .view-menu-title.collapsed::after { 	transform: rotate(0); }
 .view-menu-item {
-	border-bottom: 1px solid #eaeaea;
+	border-bottom: 1px solid $border-color;
 	padding: .65rem;
 	width: 100%;
 }

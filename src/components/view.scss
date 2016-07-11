@@ -19,6 +19,11 @@
 	padding-top: .25rem;
 	padding-left: 0;
 }
+.view-intro {
+	color: darken(#bdc3c7, 20%);
+	font-size: .9rem;
+	line-height: 1.2rem;
+}
 .view-footer {
 	clear: both;
 	padding: 1.5rem .9375rem;
@@ -67,7 +72,7 @@
 .view-menu-link:hover { color: #3498db; }
 .view-menu-item.active { background-color: #f0f0f0; }
 
-@media (min-width: 992px) {
+@include make-breakpoint(lg) {
 	.view-title small {
 		display: inline;
 		float: none;

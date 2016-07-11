@@ -1,5 +1,5 @@
 .leaders {
-	--border: 1px solid #eaeaea;
+	--border: #{1px solid $border-color };
 	list-style: none;
 	padding: 0;
 }

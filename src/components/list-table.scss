@@ -1,5 +1,5 @@
 .list-table {
-	--border: 1px solid #eaeaea;
+	--border: #{ 1px solid $border-color };
 	clear: both;
 }
 .list-table-header {
@@ -9,11 +9,11 @@
 }
 .list-table-header .header { font-weight: 600; }
 .list-table-body {
-	border-top: 1px solid #eaeaea;
+	border-top: #{ 1px solid $border-color };
 	clear: both;
 }
 .list-table-item {
-	border-bottom: 1px solid #eaeaea;
+	border-bottom: #{ 1px solid $border-color };
 	clear: both;
 	float: left;
 	padding-bottom: 1rem;
@@ -21,5 +21,5 @@
 	width: 100%;
 }
 .list-table-item.highlight { background-color: whitesmoke; }
-.list-table.inverse .list-table-item { border-bottom: 1px solid #eaeaea; }
+.list-table.inverse .list-table-item { border-bottom: #{ 1px solid $border-color }; }
 .list-table.inverse .list-table-item.highlight { background-color: #fafafa; }

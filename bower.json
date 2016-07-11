@@ -31,5 +31,9 @@
     "package.json",
     "index.html"
   ],
+  "devDependencies": {
+    "bootstrap": "zeta-labs/bootstrap#v4a2",
+    "components-font-awesome": "~4.5.0"
+  },
   "main": "dist/ui-framework.css"
 }

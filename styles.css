@@ -1,0 +1,28 @@
+html {
+  --container: 100%;
+  overflow-y: scroll;
+}
+
+@media (min-width: 544px) {
+  html { --container: 544px; }
+}
+@media (min-width: 768px) {
+  html { --container: 768px; }
+}
+@media (min-width: 992px) {
+  html { --container: 992px; }
+}
+@media (min-width: 1200px) {
+  html { --container: 1200px; }
+}
+
+.main-nav {
+  border-right: 1px solid #f0f0f0;
+  height: 100%;
+  left: (calc(100% - var(--container)) / 2)px;
+  padding: 50px 20px 50px 0;
+  position: fixed;
+}
+.main-nav .nav {
+  padding-left: 10px;
+}

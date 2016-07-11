@@ -30,6 +30,16 @@ module.exports = function (grunt) {
         files: ['src/**/*.scss'],
         tasks: ['pre-build']
       },
+      livereload: {
+        options: {
+          livereload: 9666
+        },
+        files: [
+          'index.html',
+          'styles.css',
+          'dist/*.css'
+        ]
+      },
       gruntfile: {
         files: ['Gruntfile.js']
       }
@@ -55,8 +65,9 @@ module.exports = function (grunt) {
     connect: {
       server: {
         options: {
-          port: 9001,
-          base: './',
+          port: 9002,
+          hostname: 'localhost',
+          base: '.',
           livereload: 9666
         }
       }
@@ -127,23 +138,24 @@ module.exports = function (grunt) {
           'dist/ui-framework.css': 'src/ui-framework.scss'// 'destination': 'source'
         }
       }
-    },
-    csslint: {
-      src: ['dist/*.css'],
-      options: {
-        'important': false,
-        // desconsiderado por conta dos utilities que
-        //utilizam important para sobrescrever os estilos
-        'adjoining-classes': false,
-        // desconsiderado pois é um warning relacionado a incompatibilidade com IE6
-        'unique-headings': false,
-        // desconsiderado - warning por conta de uma definição OOCSS, de que os
-        // headings devem ter o mesmo estilo sempre - e no ui-framework temos
-        // font-size e line-height diferentes para larguras de tela menores.
-        'font-sizes': false
-        //desconsiderado, pois invariavelmente os componentes terão diferentes fontes.
-      }
     }
+    // ,
+    // csslint: {
+    //   src: ['dist/*.css'],
+    //   options: {
+    //     'important': false,
+    //     // desconsiderado por conta dos utilities que
+    //     //utilizam important para sobrescrever os estilos
+    //     'adjoining-classes': false,
+    //     // desconsiderado pois é um warning relacionado a incompatibilidade com IE6
+    //     'unique-headings': false,
+    //     // desconsiderado - warning por conta de uma definição OOCSS, de que os
+    //     // headings devem ter o mesmo estilo sempre - e no ui-framework temos
+    //     // font-size e line-height diferentes para larguras de tela menores.
+    //     'font-sizes': false
+    //     //desconsiderado, pois invariavelmente os componentes terão diferentes fontes.
+    //   }
+    // }
   });
   grunt.registerTask('build', [
     'clean:dist',
@@ -156,14 +168,15 @@ module.exports = function (grunt) {
     'sass:dist'
   ]);
   grunt.registerTask('dev', [
-    'watch:sass'
+    'connect:server',
+    'watch'
   ]);
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-csslint');
+  // grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-filerev');
 };

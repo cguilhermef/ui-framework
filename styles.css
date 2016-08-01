@@ -26,3 +26,31 @@ html {
 .main-nav .nav {
   padding-left: 10px;
 }
+
+.box-sample {
+  display: block;
+  width: 100%;
+}
+.box-sample.outer {
+  background-color: #999;
+  min-height: 100px;
+}
+.box-sample.inner {
+  background-color: #0999be;
+  height: 100%;
+  position: relative;
+}
+.box-sample.sized {
+  display: inline-block;
+  height: 100px;
+  vertical-align: top;
+  width: 100px;
+}
+.class-used {
+  color: #fff;
+  display: block;
+  font-weight: 600;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}

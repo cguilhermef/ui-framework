@@ -11,3 +11,11 @@ Após finalizar as atualizações, executar os seguintes passos:
 * Executar o comando `grunt build`
 * *Commitar* as alterações
 * Atualizar a tag de *release*
+
+## Preview e documentação
+
+```terminal
+$ grunt dev
+```
+
+*URL:* `http://localhost:9002/index`

@@ -8,6 +8,11 @@
     #{$property}-left: $size !important;
     #{$property}-right: $size !important;
   }
+  @each $corner in $corner-list {
+    $c-k: nth($corner, 1);
+    $c-v: nth($corner, 2);
+    .#{$class}-#{$c-k} { #{$property}-#{$c-v}: $size !important; }
+  }
   @each $resolution in map-keys($resolution-list) {
     @include make-breakpoint($resolution) {
       .#{$class}-#{$resolution} { #{$property}: $size !important; }

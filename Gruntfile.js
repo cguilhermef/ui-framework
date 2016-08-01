@@ -138,6 +138,14 @@ module.exports = function (grunt) {
           'dist/ui-framework.css': 'src/ui-framework.scss'// 'destination': 'source'
         }
       }
+    },
+    combine_mq: {
+      default_options: {
+        expand: true,
+        cwd: 'dist/',
+        src: '*.css',
+        dest: 'dist/'
+      }
     }
     // ,
     // csslint: {
@@ -161,6 +169,7 @@ module.exports = function (grunt) {
     'clean:dist',
     'sass:dist',
     'postcss:dist',
+    'combine_mq',
     'cssmin'
   ]);
   grunt.registerTask('pre-build', [
@@ -176,6 +185,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-combine-mq');
   // grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-filerev');

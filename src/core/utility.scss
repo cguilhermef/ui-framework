@@ -62,6 +62,9 @@
   @include make-breakpoint($resolution) {
     .clear-#{$resolution} { clear: both !important; }
     .-clear-#{$resolution} { clear: none !important; }
+    .display-#{$resolution}-ib { display: inline-block !important;}
+    .display-#{$resolution}-i { display: inline !important; }
+    .display-#{$resolution}-b { display: block !important; }
     .text-left-#{$resolution} { text-align: left !important; }
     .text-center-#{$resolution} { text-align: center !important; }
     .text-right-#{$resolution} { text-align: right !important; }

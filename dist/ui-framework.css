@@ -583,6 +583,13 @@ h6 {
   height: 1.5rem;
 }
 
+.resume {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .clear-xs {
   clear: both !important;
 }
@@ -619,6 +626,13 @@ h6 {
   content: " ";
   display: block;
   height: 1.5rem;
+}
+
+.resume-xs {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .btn-table {
@@ -1322,6 +1336,13 @@ Caso de uso:
     height: 1.5rem;
   }
 
+  .resume-sm {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   .btn-cell-sm-1 {
     width: 33.33333% !important;
   }
@@ -1634,6 +1655,13 @@ Caso de uso:
     height: 1.5rem;
   }
 
+  .resume-md {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   .btn-cell-md-1 {
     width: 33.33333% !important;
   }
@@ -1944,6 +1972,13 @@ Caso de uso:
     content: " ";
     display: block;
     height: 1.5rem;
+  }
+
+  .resume-lg {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .btn-cell-lg-1 {
@@ -2278,6 +2313,13 @@ Caso de uso:
     content: " ";
     display: block;
     height: 1.5rem;
+  }
+
+  .resume-xl {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .btn-cell-xl-1 {

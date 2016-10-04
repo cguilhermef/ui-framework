@@ -17,6 +17,7 @@ html {
 }
 
 .main-nav {
+  background-color: #fff;
   border-right: 1px solid #f0f0f0;
   height: 100%;
   left: (calc(100% - var(--container)) / 2)px;
@@ -26,7 +27,6 @@ html {
 .main-nav .nav {
   padding-left: 10px;
 }
-
 .box-sample {
   display: block;
   width: 100%;

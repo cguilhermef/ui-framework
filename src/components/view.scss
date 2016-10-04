@@ -47,10 +47,10 @@
 .view-menu-title:focus { color: #373a3c; }
 
 .view-menu-title::after {
-	content: "\f053";
+  content: "\f053";
   float: right;
-	font: normal normal normal 1em/1em FontAwesome;
-  position: relative;;
+  font: normal normal normal 1em/1em FontAwesome;
+  position: relative;
   margin-top: .25em;
   transform: rotate(-90deg);
   transition: all .2s;

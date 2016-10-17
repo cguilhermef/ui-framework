@@ -12,6 +12,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/prism/themes/prism.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -44,6 +45,14 @@
                     </li>
                     <li class="nav-item">
                       <a href="#margin" class="nav-link">Margin</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="#tipography" class="nav-link">Tipography</a>
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a href="#tipography-text" class="nav-link">Texto</a>
                     </li>
                   </ul>
                 </li>
@@ -80,7 +89,7 @@
                       <div class="row">
                         <div class="col-xs-12 col-md-4 col-lg-2">
                           <span class="fwb display-b">Padding all</span>
-                          <div class="box-sample sized outer p">
+                          <div class="box-sample sized outer p" style="background-color: #12c3f1">
                             <div class="box-sample inner">
                               <span class="class-used">.p</span>
                             </div>
@@ -88,7 +97,7 @@
                         </div>
                         <div class="col-xs-12 col-md-4 col-lg-2">
                           <span class="fwb display-b">Padding top</span>
-                          <div class="box-sample sized outer p-t">
+                          <div class="box-sample sized outer p-t" style="background-color: #12c3f1">
                             <div class="box-sample inner">
                               <span class="class-used">.p-t</span>
                             </div>
@@ -96,9 +105,17 @@
                         </div>
                         <div class="col-xs-12 col-md-4 col-lg-2">
                           <span class="fwb display-b">Padding vertical</span>
-                          <div class="box-sample outer sized p-y">
+                          <div class="box-sample outer sized p-y" style="background-color: #12c3f1">
                             <div class="box-sample inner">
                               <span class="class-used">.p-y</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-lg-2">
+                          <span class="fwb display-b">Padding top, bottom e left</span>
+                          <div class="box-sample outer sized p -p-r" style="background-color: #12c3f1">
+                            <div class="box-sample inner">
+                              <span class="class-used">.p .-p-r</span>
                             </div>
                           </div>
                         </div>
@@ -135,6 +152,134 @@
                             </div>
                           </div>
                         </div>
+                        <div class="col-xs-12 m-b -m-b-md col-md-4 col-lg-2">
+                          <span class="fwb display-b">Margin top, bottom e left</span>
+                          <div class="box-sample-m" style="background-color: #ffa500;">
+                            <div class="box-sample outer sized m -m-r" style="width: calc(100% - 1rem)">
+                              <span class="class-used">.m .-m-r</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    id="tipography-text"
+                    class="p4nel">
+                    <h3 class="p4nel-header">
+                      <span class="p4nel-title">Tipography</span>
+                    </h3>
+                    <div class="p4nel-body">
+                      <p><i>Tipography</i> são classes para adequação de textos.</p>
+                      <div
+                        class="p4nel">
+                        <h4 class="p4nel-header">
+                          <span class="p4nel-title">.fwb</span>
+                        </h4>
+                        <div class="p4nel-body">
+                          <div class="row">
+                            <div class="col-xs-12">
+                              Font weight bold.
+                            </div>
+                          </div>
+                          <div class="row m-y">
+                            <div class="col-xs-12">
+                              <span class="fwb">Exemplo:</span> <br>
+                              Lorem ipsum dolor <span class="fwb"> sit amet</span> consectetur.
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-12">
+<pre>
+  <code class="language-html">Lorem ipsum dolor &lt;span class="fwb"&gt; sit amet&lt;/span&gt; consectetur.</code>
+</pre>                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="p4nel">
+                        <h4 class="p4nel-header">
+                          <span class="p4nel-title">.fwl</span>
+                        </h4>
+                        <div class="p4nel-body">
+                          <div class="row">
+                            <div class="col-xs-12">
+                              Font weight light.
+                            </div>
+                          </div>
+                          <div class="row m-y">
+                            <div class="col-xs-12">
+                              <span class="fwb">Exemplo:</span> <br>
+                              Lorem ipsum dolor <span class="fwl"> sit amet</span> consectetur.
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-12">
+<pre>
+  <code class="language-html">Lorem ipsum dolor &lt;span class="fwl"&gt; sit amet&lt;/span&gt; consectetur.</code>
+</pre>                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="p4nel">
+                        <h4 class="p4nel-header">
+                          <span class="p4nel-title">.fsi</span>
+                        </h4>
+                        <div class="p4nel-body">
+                          <div class="row">
+                            <div class="col-xs-12">
+                              Font style italic.
+                            </div>
+                          </div>
+                          <div class="row m-y">
+                            <div class="col-xs-12">
+                              <span class="fwb">Exemplo:</span> <br>
+                              Lorem ipsum dolor <span class="fsi"> sit amet</span> consectetur.
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-12">
+<pre>
+  <code class="language-html">Lorem ipsum dolor &lt;span class="fwl"&gt; sit amet&lt;/span&gt; consectetur.</code>
+</pre>                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="p4nel">
+                        <h4 class="p4nel-header">
+                          <span class="p4nel-title">.small-text e .light-text</span>
+                        </h4>
+                        <div class="p4nel-body">
+                          <div class="row m-b">
+                            <div class="col-xs-12">
+                              <h5>Texto normal</h5>
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur nisi eius aut molestiae saepe, dolorem impedit dignissimos doloremque, id ipsa soluta nulla itaque repellat vel beatae. Quam animi, nesciunt facilis.
+                            </div>
+                          </div>
+                          <div class="row m-b">
+                            <div class="col-xs-12">
+                              <h5>.small-text</h5>
+                              <p class="small-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur nisi eius aut molestiae saepe, dolorem impedit dignissimos doloremque, id ipsa soluta nulla itaque repellat vel beatae. Quam animi, nesciunt facilis.</p>
+<pre>
+<code class="language-html">&lt;p class="small-text"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;</code>
+</pre>
+                            </div>
+                          </div>
+                          <div class="row m-b">
+                            <div class="col-xs-12">
+                              <h5>.light-text</h5>
+                              <p class="light-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur nisi eius aut molestiae saepe, dolorem impedit dignissimos doloremque, id ipsa soluta nulla itaque repellat vel beatae. Quam animi, nesciunt facilis.</p>
+<pre>
+<code class="language-html">&lt;p class="light-text"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;</code>
+</pre>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -147,7 +292,7 @@
                   <span class="p4nel-title">Leaders</span>
                 </h3>
                 <div class="p4nel-body">
-                  <div class="row">
+                  <div class="row m-b">
                     <div class="col-xs-12 col-md-4">
                       <ul class="leaders">
                         <li class="leaders-item">
@@ -160,8 +305,8 @@
                         <li class="leaders-item">
                           <span class="leaders-label">Valor 2</span>
                           <span class="leaders-value">
-                            <span class="unity">R$</span>
-                            <span class="value">20.00</span>
+                            <span class="value">25</span>
+                            <span class="unity">%</span>
                           </span>
                         </li>
                         <li class="leaders-item">
@@ -174,6 +319,93 @@
                       </ul>
                     </div>
                   </div>
+                  <div class="row">
+                    <div class="col-xs-12">
+<pre>
+<code class="language-html">
+  &lt;ul class="leaders"&gt;
+    &lt;li class="leaders-item"&gt;
+      &lt;span class="leaders-label"&gt;Valor 1&lt;/span&gt;
+      &lt;span class="leaders-value"&gt;
+        &lt;span class="unity"&gt;R$&lt;/span&gt;
+        &lt;span class="value"&gt;10.00&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li class="leaders-item"&gt;
+      &lt;span class="leaders-label"&gt;Valor 2&lt;/span&gt;
+      &lt;span class="leaders-value"&gt;
+        &lt;span class="value"&gt;20.00&lt;/span&gt;
+        &lt;span class="unity"&gt;%&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li class="leaders-item"&gt;
+      &lt;span class="leaders-label fwb"&gt;Valor total&lt;/span&gt;
+      &lt;span class="leaders-value"&gt;
+        &lt;span class="unity"&gt;R$&lt;/span&gt;
+        &lt;span class="value"&gt;30.00&lt;/span&gt;
+      &lt;/span&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+</code>
+</pre>                      
+                    </div>
+                  </div>
+                  <div class="row m-t">
+                    <h5 class="p4nel-title">.condensed</h5>
+                    <p>Diminui o espaçamento entre as linhas do leaders.</p>
+                  </div>
+                  <div class="row m-b">
+                    <div class="col-xs-12 col-md-4">
+                      <ul class="leaders condensed">
+                        <li class="leaders-item">
+                          <span class="leaders-label">Valor 1</span>
+                          <span class="leaders-value">
+                            <span class="unity">R$</span>
+                            <span class="value">10.00</span>
+                          </span>
+                        </li>
+                        <li class="leaders-item">
+                          <span class="leaders-label">Valor 2</span>
+                          <span class="leaders-value">
+                            <span class="unity">R$</span>
+                            <span class="value">10.00</span>
+                          </span>
+                        </li>
+                        <li class="leaders-item">
+                          <span class="leaders-label">Valor 3</span>
+                          <span class="leaders-value">
+                            <span class="unity">R$</span>
+                            <span class="value">10.00</span>
+                          </span>
+                        </li>
+                        <li class="leaders-item">
+                          <span class="leaders-label">Valor 4</span>
+                          <span class="leaders-value">
+                            <span class="value">25</span>
+                            <span class="unity">%</span>
+                          </span>
+                        </li>
+                        <li class="leaders-item">
+                          <span class="leaders-label fwb">Valor total</span>
+                          <span class="leaders-value">
+                            <span class="unity">R$</span>
+                            <span class="value">40.00</span>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12">
+<pre>
+<code class="language-html">
+&lt;ul class="leaders condensed"&gt;
+&lt;!-- .leaders-item --&gt;
+&lt;/ul&gt;
+</code>
+</pre>                      
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
@@ -181,10 +413,11 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
-    <script src="scripts.js"></script>
     <!-- build:js(.) scripts/vendor.js -->
+    <script src="bower_components/prism/prism.js"></script>
     <!-- bower:js -->
     <!-- endbower -->
     <!-- endbuild -->
+    <script src="scripts.js"></script>
   </body>
 </html>

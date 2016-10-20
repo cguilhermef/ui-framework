@@ -1,3 +1,6 @@
+/**
+ * Produz classes no conceito t,r,b,l,y,x,small
+ */
 @mixin utility-generate ($class, $property, $size) {
   .#{$class} { #{$property}: $size !important; }
   .#{$class}-y {
@@ -45,11 +48,22 @@
 @include utility-generate('-b', border, none);
 /**/
 
+/**
+ * Classes utilitarias fixas
+ */
+.cursor-p { cursor: pointer; }
+.cursor-d { cursor: default; }
+/**/
+
+/**
+ * Classes utilitarias variaveis por largura de tela
+ */
 .clear { clear: both !important; }
 .-clear { clear: none !important; }
 .display-ib { display: inline-block !important;}
 .display-i { display: inline !important; }
 .display-b { display: block !important; }
+.display-n { display: none !important; }
 .text-left { text-align: left !important; }
 .text-center { text-align: center !important; }
 .text-right { text-align: right !important; }
@@ -64,6 +78,11 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
+/**/
+/** 
+ * Geracao das classes para cada largura de tela, no conceito 
+ * "ate a largura X" 
+ */
 @each $resolution in map-keys($resolution-list) {
   @include make-breakpoint($resolution) {
     .clear-#{$resolution} { clear: both !important; }
@@ -71,6 +90,7 @@
     .display-#{$resolution}-ib { display: inline-block !important;}
     .display-#{$resolution}-i { display: inline !important; }
     .display-#{$resolution}-b { display: block !important; }
+    .display-#{$resolution}-n { display: none !important; }
     .text-left-#{$resolution} { text-align: left !important; }
     .text-center-#{$resolution} { text-align: center !important; }
     .text-right-#{$resolution} { text-align: right !important; }
@@ -87,3 +107,12 @@
     }
   }
 }
+/**
+ * Geracao das classes por largura de tela, no conceito "na largura X"
+ */
+@each $resolution in map-keys($resolution-list) {
+  @include make-interval($resolution) {
+    .hidden-in-#{$resolution} { display: none !important; }
+  }
+}
+/**/

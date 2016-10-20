@@ -71,7 +71,7 @@ h6 {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1rem;
-}/** margin **/.m {
+}/** Produz classes no conceito t,r,b,l,y,x,small *//** margin **/.m {
   margin: 1rem !important;
 }
 
@@ -545,7 +545,13 @@ h6 {
 
 .-b-l-xs {
   border-left: none !important;
-}/**/.clear {
+}/**//** Classes utilitarias fixas */.cursor-p {
+  cursor: pointer;
+}
+
+.cursor-d {
+  cursor: default;
+}/**//** Classes utilitarias variaveis por largura de tela */.clear {
   clear: both !important;
 }
 
@@ -563,6 +569,10 @@ h6 {
 
 .display-b {
   display: block !important;
+}
+
+.display-n {
+  display: none !important;
 }
 
 .text-left {
@@ -588,9 +598,7 @@ h6 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.clear-xs {
+}/**//**  Geracao das classes para cada largura de tela, no conceito  "ate a largura X"  */.clear-xs {
   clear: both !important;
 }
 
@@ -608,6 +616,10 @@ h6 {
 
 .display-xs-b {
   display: block !important;
+}
+
+.display-xs-n {
+  display: none !important;
 }
 
 .text-left-xs {
@@ -633,9 +645,7 @@ h6 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.btn-table {
+}/** Geracao das classes por largura de tela, no conceito "na largura X" *//**/.btn-table {
   clear: both;
   display: table;
   margin-left: -4px;
@@ -1037,6 +1047,12 @@ Caso de uso:
   background-color: #f0f0f0;
 }
 
+@media (min-width: 0) and (max-width: 543px) {
+  .hidden-in-xs {
+    display: none !important;
+  }
+}
+
 @media (min-width: 544px) {
 /* md */  h2 {
     line-height: 3.2rem;
@@ -1318,6 +1334,10 @@ Caso de uso:
     display: block !important;
   }
 
+  .display-sm-n {
+    display: none !important;
+  }
+
   .text-left-sm {
     text-align: left !important;
   }
@@ -1373,6 +1393,12 @@ Caso de uso:
 
   .btn-cell-slim-sm .fa {
     display: inline-block !important;
+  }
+}
+
+@media (min-width: 544px) and (max-width: 767px) {
+  .hidden-in-sm {
+    display: none !important;
   }
 }
 
@@ -1637,6 +1663,10 @@ Caso de uso:
     display: block !important;
   }
 
+  .display-md-n {
+    display: none !important;
+  }
+
   .text-left-md {
     text-align: left !important;
   }
@@ -1692,6 +1722,12 @@ Caso de uso:
 
   .btn-cell-slim-md .fa {
     display: inline-block !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-in-md {
+    display: none !important;
   }
 }
 
@@ -1956,6 +1992,10 @@ Caso de uso:
     display: block !important;
   }
 
+  .display-lg-n {
+    display: none !important;
+  }
+
   .text-left-lg {
     text-align: left !important;
   }
@@ -2033,6 +2073,12 @@ Caso de uso:
 
   .view-footer {
     padding: 3rem 0;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hidden-in-lg {
+    display: none !important;
   }
 }
 
@@ -2297,6 +2343,10 @@ Caso de uso:
     display: block !important;
   }
 
+  .display-xl-n {
+    display: none !important;
+  }
+
   .text-left-xl {
     text-align: left !important;
   }
@@ -2320,6 +2370,10 @@ Caso de uso:
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+
+  .hidden-in-xl {
+    display: none !important;
   }
 
   .btn-cell-xl-1 {

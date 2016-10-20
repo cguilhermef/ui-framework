@@ -11,3 +11,16 @@
     @content;
   }
 };
+@mixin make-interval($resolution) {
+  $min: map-get($resolution-list, $resolution);
+  $max: map-get($resolution-list-max, $resolution);
+  @if $max {
+    @media  (min-width: #{$min}) and ( max-width: #{$max} ) {
+      @content;
+    }
+  } @else {
+    @media (min-width: #{$min}) {
+      @content;
+    }
+  }
+};

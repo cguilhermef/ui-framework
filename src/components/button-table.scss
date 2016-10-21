@@ -1,22 +1,25 @@
 .btn-table {
   clear: both;
-  display: table;
-  margin-left: -4px;
-  width: calc(100% + 12px);
+  font-size: 12px; 
+  /** 
+   font-size controla o espaço entre os botões, por serem
+   display: inline-block 
+  */
+  width: 100%;
 }
 .btn-cell {
   display: inline-block;
 	min-width: 32px;
-  padding-left: 4px;
-  padding-right: 4px;
   text-align: center;
-  width: 100%;
   vertical-align: middle;
 }
+// .btn-cell + .btn-cell {
+//   margin-left: 3px;
+// }
 .btn-cell .btn {
   display: block;
 	font-size: 1rem;
-  margin: 0 auto;
+  margin: 0;
   min-width: 32px;
 	padding: 0.35rem 0.5em;
   overflow: hidden;
@@ -28,17 +31,30 @@
 	left: auto;
 	right: 2px;
 }
-
-.btn-cell-1 { width: 33.33333% !important; }
-.btn-cell-2 { width: 66.66666% !important; }
-.btn-cell-3 { width: calc(100% - 2px) !important; }
+.btn-cell-dropdown .btn > .fa {
+  font-size: 1.8rem;
+}
+.btn-cell-dropdown .btn::before {
+  content: " ";
+  display: block;
+  height: .79rem;
+}
+.btn-cell-dropdown .btn::after {
+  content: " ";
+  display: block;
+  height: .79rem;
+}
+.btn-cell-1 {
+ width: 31% !important; }
+.btn-cell-2 {width: 65% !important; }
+.btn-cell-3 {width: 99% !important; }
 .btn-cell-1 .btn > .fa,
 .btn-cell-2 .btn > .fa,
 .btn-cell-boxed .btn > .fa { display: block !important; }
 .btn-cell-slim .fa { display: inline-block !important; }
 .btn-cell-offset-0 { margin-left: 0 !important; }
-.btn-cell-offset-1 { margin-left: calc(33.33333% - 4px) !important; }
-.btn-cell-offset-2 { margin-left: calc(66.66666% - 4px) !important; }
+.btn-cell-offset-1 { margin-left: 33.33333% !important; }
+.btn-cell-offset-2 { margin-left: 66.66666% !important; }
 
 @each $resolution in map-keys($resolution-list) {
   @include make-breakpoint($resolution) {
@@ -46,20 +62,18 @@
     .btn-cell-#{$resolution}-2 { width: 66.66666% !important; }
     .btn-cell-#{$resolution}-3 { width: 100% !important; }
     .btn-cell-offset-#{$resolution}-0 { margin-left: 0 !important; }
-    .btn-cell-offset-#{$resolution}-1 { margin-left: calc(33.33333% - 4px) !important; }
-    .btn-cell-offset-#{$resolution}-2 { margin-left: calc(66.66666% - 4px) !important; }
+    .btn-cell-offset-#{$resolution}-1 { margin-left: 33.33333% !important; }
+    .btn-cell-offset-#{$resolution}-2 { margin-left: 66.66666% !important; }
     .btn-cell-boxed-#{$resolution} .fa { display: block !important; }
     .btn-cell-slim-#{$resolution} .fa { display: inline-block !important; }
   }
 }
 @include make-breakpoint(lg) {
   .btn-table {
-    margin-left: -3px;
     text-align: right;
-    width: calc(100% + 6px);
   }
-  .btn-cell {
-    padding-left: 2px;
-    padding-right: 2px;
-  }
+  // .btn-cell {
+  //   padding-left: 2px;
+  //   padding-right: 2px;
+  // }
 }

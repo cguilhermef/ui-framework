@@ -896,46 +896,46 @@ Caso de uso:
   background-color: #fafafa;
 }
 
-.p4nel,.panel {
+.panel,.panel {
   --border: 1px solid #eaeaea;
   clear: both;
   margin-bottom: 2rem;
   width: 100%;
 }
 
-.p4nel.highlight,.panel.highlight {
+.panel.highlight,.panel.highlight {
   background-color: #f0f0f0;
   padding: 1rem;
 }
 
-.p4nel.last,.panel.last {
+.panel.last,.panel.last {
   border-bottom: 1px solid #eaeaea;
   padding-bottom: 1rem;
 }
 
-.p4nel .p4nel,.panel .panel {
+.panel .panel,.panel .panel {
   margin-bottom: 0;
   padding-top: .9375rem;
 }
 
-.p4nel-header,.panel-header {
+.panel-header,.panel-header {
   border-bottom: 1px solid #eaeaea;
   margin-bottom: 1rem;
   position: relative;
 }
 
-.p4nel-body,.panel-body {
+.panel-body,.panel-body {
   clear: both;
   padding-left: .9375rem;
   padding-right: .9375rem;
 }
 
-.p4nel .p4nel .p4nel-body {
+.panel .panel .panel-body {
   padding-left: 0;
   padding-right: 0;
 }
 
-.p4nel-title {
+.panel-title {
   color: #3498db;
   display: block;
   font-size: inherit;
@@ -943,16 +943,16 @@ Caso de uso:
   width: 100%;
 }
 
-.p4nel-title:focus,.p4nel-title:hover,.p4nel-title:active,.panel-title:focus,.panel-title:hover,.panel-title:active {
+.panel-title:focus,.panel-title:hover,.panel-title:active,.panel-title:focus,.panel-title:hover,.panel-title:active {
   color: #3498db;
 }
 
-.p4nel .p4nel .p4nel-title,.panel .panel .panel-title {
+.panel .panel .panel-title,.panel .panel .panel-title {
   padding-left: 0;
   padding-right: 0;
 }
 
-.p4nel.collapsible > .p4nel-header .p4nel-title::after,.panel.collapsible > .panel-header .panel-title::after {
+.panel.collapsible > .panel-header .panel-title::after,.panel.collapsible > .panel-header .panel-title::after {
   content: "\f053";
   float: right;
   font: normal normal normal 1em/1em FontAwesome;
@@ -963,19 +963,19 @@ Caso de uso:
   top: -50%;
 }
 
-.p4nel.collapsible > .p4nel-header .p4nel-title.collapsed::after,.panel.collapsible > .panel-header .panel-title.collapsed::after {
+.panel.collapsible > .panel-header .panel-title.collapsed::after,.panel.collapsible > .panel-header .panel-title.collapsed::after {
   transform: rotate(0);
 }
 
-.p4nel.collapsible > .p4nel-header .p4nel-title,.panel.collapsible > .panel-header .panel-title {
+.panel.collapsible > .panel-header .panel-title,.panel.collapsible > .panel-header .panel-title {
   cursor: pointer;
 }
 
-.p4nel.inverse,.panel.inverse {
+.panel.inverse,.panel.inverse {
   background-color: whitesmoke;
 }
 
-.p4nel.boxed,.panel.boxed {
+.panel.boxed,.panel.boxed {
   border: 1px solid #eaeaea;
   padding: 1rem;
 }

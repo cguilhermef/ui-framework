@@ -15,11 +15,14 @@
 }
 .btn-cell .btn {
   display: block;
+	font-size: 1rem;
   margin: 0 auto;
   min-width: 32px;
+	padding: 0.35rem 0.5em;
   overflow: hidden;
   width: 100%;
 }
+.btn-cell .btn > .fa { line-height: 1.6rem; }
 .btn-cell-dropdown { position: relative; }
 .btn-cell-dropdown .dropdown-menu {
 	left: auto;
@@ -29,9 +32,9 @@
 .btn-cell-1 { width: 33.33333% !important; }
 .btn-cell-2 { width: 66.66666% !important; }
 .btn-cell-3 { width: calc(100% - 2px) !important; }
-.btn-cell-1 .fa,
-.btn-cell-2 .fa,
-.btn-cell-boxed .fa { display: block !important; }
+.btn-cell-1 .btn > .fa,
+.btn-cell-2 .btn > .fa,
+.btn-cell-boxed .btn > .fa { display: block !important; }
 .btn-cell-slim .fa { display: inline-block !important; }
 .btn-cell-offset-0 { margin-left: 0 !important; }
 .btn-cell-offset-1 { margin-left: calc(33.33333% - 4px) !important; }

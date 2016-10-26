@@ -1,6 +1,6 @@
 {
   "name": "ui-framework",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/zeta-labs/ui-framework",
   "authors": [
     "Theo Renck <carlos.renck@zeta.com.br>"
@@ -32,7 +32,7 @@
     "index.html"
   ],
   "devDependencies": {
-    "bootstrap": "zeta-labs/bootstrap#v4a2",
+    "bootstrap": "zeta-labs/bootstrap#v4a5",
     "components-font-awesome": "~4.5.0"
   },
   "main": "dist/ui-framework.css"

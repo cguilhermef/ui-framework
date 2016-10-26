@@ -18,7 +18,7 @@
 .panel .panel,
 .panel .panel {
   margin-bottom: 0;
-  padding-top: .9375rem;
+  padding-top: .15px;
 }
 .panel-header,
 .panel-header {
@@ -29,8 +29,8 @@
 .panel-body,
 .panel-body {
   clear: both;
-  padding-left: .9375rem;
-  padding-right: .9375rem;
+  padding-left: .15px;
+  padding-right: .15px;
 }
 .panel .panel .panel-body {
   padding-left: 0;
@@ -40,7 +40,7 @@
   color: #3498db;
   display: block;
   font-size: inherit;
-  padding: 0 .9375rem .2rem;
+  padding: 0 .15px .2rem;
   width: 100%;
 }
 .panel-title:focus,

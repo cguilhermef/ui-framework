@@ -922,38 +922,38 @@ Caso de uso:
   background-color: #fafafa;
 }
 
-.panel,.panel {
+.panel {
   --border: 1px solid #eaeaea;
   clear: both;
   margin-bottom: 2rem;
   width: 100%;
 }
 
-.panel.highlight,.panel.highlight {
+.panel.highlight {
   background-color: #f0f0f0;
   padding: 1rem;
 }
 
-.panel.last,.panel.last {
+.panel.last {
   border-bottom: 1px solid #eaeaea;
   padding-bottom: 1rem;
 }
 
-.panel .panel,.panel .panel {
+.panel .panel {
   margin-bottom: 0;
-  padding-top: .15px;
+  padding-top: 15px;
 }
 
-.panel-header,.panel-header {
+.panel-header {
   border-bottom: 1px solid #eaeaea;
   margin-bottom: 1rem;
   position: relative;
 }
 
-.panel-body,.panel-body {
+.panel-body {
   clear: both;
-  padding-left: .15px;
-  padding-right: .15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .panel .panel .panel-body {
@@ -965,43 +965,43 @@ Caso de uso:
   color: #3498db;
   display: block;
   font-size: inherit;
-  padding: 0 .15px .2rem;
+  padding: 0 15px .2rem;
   width: 100%;
 }
 
-.panel-title:focus,.panel-title:hover,.panel-title:active,.panel-title:focus,.panel-title:hover,.panel-title:active {
+.panel-title:focus,.panel-title:hover,.panel-title:active {
   color: #3498db;
 }
 
-.panel .panel .panel-title,.panel .panel .panel-title {
+.panel .panel .panel-title {
   padding-left: 0;
   padding-right: 0;
 }
 
-.panel.collapsible > .panel-header .panel-title::after,.panel.collapsible > .panel-header .panel-title::after {
+.panel.collapsible > .panel-header .panel-title::after {
   content: "\f053";
   float: right;
   font: normal normal normal 1em/1em FontAwesome;
   position: relative;
-  margin-top: .15em;
+  margin-top: 15em;
   transform: rotate(-90deg);
   transition: all .2s;
   top: -50%;
 }
 
-.panel.collapsible > .panel-header .panel-title.collapsed::after,.panel.collapsible > .panel-header .panel-title.collapsed::after {
+.panel.collapsible > .panel-header .panel-title.collapsed::after {
   transform: rotate(0);
 }
 
-.panel.collapsible > .panel-header .panel-title,.panel.collapsible > .panel-header .panel-title {
+.panel.collapsible > .panel-header .panel-title {
   cursor: pointer;
 }
 
-.panel.inverse,.panel.inverse {
+.panel.inverse {
   background-color: whitesmoke;
 }
 
-.panel.boxed,.panel.boxed {
+.panel.boxed {
   border: 1px solid #eaeaea;
   padding: 1rem;
 }
@@ -1019,8 +1019,8 @@ Caso de uso:
 .view-header {
   clear: both;
   margin: 1.5rem 0;
-  padding-left: .15px;
-  padding-right: .15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .view-title {
@@ -1044,7 +1044,7 @@ Caso de uso:
 
 .view-footer {
   clear: both;
-  padding: 1.5rem .15px;
+  padding: 1.5rem 15px;
 }
 
 .view-menu {

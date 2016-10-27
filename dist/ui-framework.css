@@ -705,17 +705,11 @@ h6 {
   right: 2px;
 }
 
-.btn-cell-dropdown .btn > .fa {
+[class~="btn-cell-boxed"].btn-cell-dropdown .btn > .fa {
   font-size: 1.8rem;
 }
 
-.btn-cell-dropdown .btn::before {
-  content: " ";
-  display: block;
-  height: .79rem;
-}
-
-.btn-cell-dropdown .btn::after {
+[class~="btn-cell-boxed"].btn-cell-dropdown .btn::before,[class~="btn-cell-boxed"].btn-cell-dropdown .btn::after {
   content: " ";
   display: block;
   height: .79rem;
@@ -783,6 +777,16 @@ h6 {
 
 .btn-cell-slim-xs .fa {
   display: inline-block !important;
+}
+
+[class~="btn-cell-boxed-xs"].btn-cell-dropdown .btn > .fa {
+  font-size: 1.8rem;
+}
+
+[class~="btn-cell-boxed-xs"].btn-cell-dropdown .btn::before,[class~="btn-cell-boxed-xs"].btn-cell-dropdown .btn::after {
+  content: " ";
+  display: block;
+  height: .79rem;
 }/**
 Caso de uso:
 
@@ -1445,6 +1449,16 @@ Caso de uso:
   .btn-cell-slim-sm .fa {
     display: inline-block !important;
   }
+
+  [class~="btn-cell-boxed-sm"].btn-cell-dropdown .btn > .fa {
+    font-size: 1.8rem;
+  }
+
+  [class~="btn-cell-boxed-sm"].btn-cell-dropdown .btn::before,[class~="btn-cell-boxed-sm"].btn-cell-dropdown .btn::after {
+    content: " ";
+    display: block;
+    height: .79rem;
+  }
 }
 
 @media (min-width: 544px) and (max-width: 767px) {
@@ -1774,6 +1788,16 @@ Caso de uso:
   .btn-cell-slim-md .fa {
     display: inline-block !important;
   }
+
+  [class~="btn-cell-boxed-md"].btn-cell-dropdown .btn > .fa {
+    font-size: 1.8rem;
+  }
+
+  [class~="btn-cell-boxed-md"].btn-cell-dropdown .btn::before,[class~="btn-cell-boxed-md"].btn-cell-dropdown .btn::after {
+    content: " ";
+    display: block;
+    height: .79rem;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2102,6 +2126,16 @@ Caso de uso:
 
   .btn-cell-slim-lg .fa {
     display: inline-block !important;
+  }
+
+  [class~="btn-cell-boxed-lg"].btn-cell-dropdown .btn > .fa {
+    font-size: 1.8rem;
+  }
+
+  [class~="btn-cell-boxed-lg"].btn-cell-dropdown .btn::before,[class~="btn-cell-boxed-lg"].btn-cell-dropdown .btn::after {
+    content: " ";
+    display: block;
+    height: .79rem;
   }
 
   .btn-table {
@@ -2450,5 +2484,15 @@ Caso de uso:
 
   .btn-cell-slim-xl .fa {
     display: inline-block !important;
+  }
+
+  [class~="btn-cell-boxed-xl"].btn-cell-dropdown .btn > .fa {
+    font-size: 1.8rem;
+  }
+
+  [class~="btn-cell-boxed-xl"].btn-cell-dropdown .btn::before,[class~="btn-cell-boxed-xl"].btn-cell-dropdown .btn::after {
+    content: " ";
+    display: block;
+    height: .79rem;
   }
 }

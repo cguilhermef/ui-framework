@@ -1,9 +1,10 @@
 {
   "name": "ui-framework",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "homepage": "https://github.com/zeta-labs/ui-framework",
   "authors": [
-    "Theo Renck <carlos.renck@zeta.com.br>"
+    "Theo Renck <carlos.renck@zeta.com.br>",
+    "Christian G. Fritsch <christian@zeta.com.br>"
   ],
   "repository": {
     "type": "git",

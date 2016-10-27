@@ -31,15 +31,9 @@
 	left: auto;
 	right: 2px;
 }
-.btn-cell-dropdown .btn > .fa {
-  font-size: 1.8rem;
-}
-.btn-cell-dropdown .btn::before {
-  content: " ";
-  display: block;
-  height: .79rem;
-}
-.btn-cell-dropdown .btn::after {
+[class~="btn-cell-boxed"].btn-cell-dropdown .btn > .fa { font-size: 1.8rem; }
+[class~="btn-cell-boxed"].btn-cell-dropdown .btn::before,
+[class~="btn-cell-boxed"].btn-cell-dropdown .btn::after {
   content: " ";
   display: block;
   height: .79rem;
@@ -66,6 +60,13 @@
     .btn-cell-offset-#{$resolution}-2 { margin-left: 66.66666% !important; }
     .btn-cell-boxed-#{$resolution} .fa { display: block !important; }
     .btn-cell-slim-#{$resolution} .fa { display: inline-block !important; }
+    [class~="btn-cell-boxed-#{$resolution}"].btn-cell-dropdown .btn > .fa { font-size: 1.8rem;}
+    [class~="btn-cell-boxed-#{$resolution}"].btn-cell-dropdown .btn::before,
+    [class~="btn-cell-boxed-#{$resolution}"].btn-cell-dropdown .btn::after {
+      content: " ";
+      display: block;
+      height: .79rem;
+    }
   }
 }
 @include make-breakpoint(lg) {

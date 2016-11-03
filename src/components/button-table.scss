@@ -12,6 +12,7 @@
 	min-width: 32px;
   text-align: center;
   vertical-align: middle;
+  width: calc( var(--width) - 3px) !important;
 }
 // .btn-cell + .btn-cell {
 //   margin-left: 3px;
@@ -39,23 +40,28 @@
   height: .79rem;
 }
 .btn-cell-1 {
- width: 31% !important; }
-.btn-cell-2 {width: 65% !important; }
-.btn-cell-3 {width: 99% !important; }
+  --width: 33.33333%;}
+.btn-cell-2 {
+  --width: 66.66666%;}
+.btn-cell-3 {
+  --width: 99.99999%;}
 .btn-cell-boxed .btn > .fa { display: block !important; }
 .btn-cell-slim .fa { display: inline-block !important; }
 .btn-cell-offset-0 { margin-left: 0 !important; }
-.btn-cell-offset-1 { margin-left: 31% !important; }
-.btn-cell-offset-2 { margin-left: 65% !important; }
+.btn-cell-offset-1 { margin-left: 33.33333% !important; }
+.btn-cell-offset-2 { margin-left: 66.66666% !important; }
 
 @each $resolution in map-keys($resolution-list) {
   @include make-breakpoint($resolution) {
-    .btn-cell-#{$resolution}-1 { width: 31% !important; }
-    .btn-cell-#{$resolution}-2 { width: 65% !important; }
-    .btn-cell-#{$resolution}-3 { width: 99% !important; }
+    .btn-cell-#{$resolution}-1 {
+      --width: 33.33333%;  }
+    .btn-cell-#{$resolution}-2 {
+      --width: 66.66666%;  }
+    .btn-cell-#{$resolution}-3 {
+      --width: 99.99999%;  }
     .btn-cell-offset-#{$resolution}-0 { margin-left: 0 !important; }
-    .btn-cell-offset-#{$resolution}-1 { margin-left: 31% !important; }
-    .btn-cell-offset-#{$resolution}-2 { margin-left: 65% !important; }
+    .btn-cell-offset-#{$resolution}-1 { margin-left: 33.33333% !important; }
+    .btn-cell-offset-#{$resolution}-2 { margin-left: 99.99999% !important; }
     .btn-cell-boxed-#{$resolution} .fa { display: block !important; }
     .btn-cell-slim-#{$resolution} .fa { display: inline-block !important; }
     [class~="btn-cell-boxed-#{$resolution}"].btn-cell-dropdown .btn > .fa { font-size: 1.8rem;}
@@ -70,6 +76,9 @@
 @include make-breakpoint(lg) {
   .btn-table {
     text-align: right;
+  }
+  .btn-cell {
+    width: calc( var(--width) - 4px) !important;
   }
   // .btn-cell {
   //   padding-left: 2px;

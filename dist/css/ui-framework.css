@@ -1121,7 +1121,7 @@ Caso de uso:
 }
 
 @font-face {
-  font-family:'open_sansbold';src:url("../OpenSans-Bold-webfont.woff") format("woff");font-weight:700;font-style:normal;
+  font-family:'Open Sans';src:url("../fonts/OpenSans-Bold-webfont.woff") format("woff");font-weight:700;font-style:normal;
 }
 
 @media (min-width: 0) and (max-width: 543px) {

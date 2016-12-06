@@ -28,7 +28,7 @@ module.exports = function (grunt) {
       },
       sass: {
         files: ['src/**/*.scss'],
-        tasks: ['pre-build']
+        tasks: ['pre-build', 'copy:dist']
       },
       livereload: {
         options: {
@@ -94,10 +94,10 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           dot: true,
-          cwd: 'src/',
-          dest: 'dist/',
+          cwd: 'src/fonts/',
+          dest: 'dist/fonts/',
           src: [
-            '**/*css'
+            '**/*.woff'
           ]
         }]
       },
@@ -105,10 +105,10 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           dot: true,
-          cwd: 'src/',
-          dest: 'dev/',
+          cwd: 'src/fonts/',
+          dest: 'dist/fonts/',
           src: [
-            '**/*css'
+            '**/*.woff'
           ]
         }]
       }
@@ -170,7 +170,8 @@ module.exports = function (grunt) {
     'sass:dist',
     'postcss:dist',
     'combine_mq',
-    'cssmin'
+    'cssmin',
+    'copy:dist'
   ]);
   grunt.registerTask('pre-build', [
     'clean:dist',
@@ -185,6 +186,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-combine-mq');
   // grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-postcss');

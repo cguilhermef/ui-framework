@@ -37,7 +37,7 @@ module.exports = function (grunt) {
         files: [
           'index.html',
           'styles.css',
-          'dist/*.css'
+          'dist/css/*.css'
         ]
       },
       gruntfile: {
@@ -82,9 +82,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: 'dist/',
+          cwd: 'dist/css/',
           src: '*.css',
-          dest: 'dist/'
+          dest: 'dist/css/'
         }]
       }
     },
@@ -117,9 +117,9 @@ module.exports = function (grunt) {
       target: {
         files: [{
           expand: true,
-          cwd: 'dist/',
+          cwd: 'dist/css/',
           src: ['*.css'],
-          dest: 'dist/',
+          dest: 'dist/css/',
           ext: '.min.css'
         }]
       }
@@ -135,35 +135,18 @@ module.exports = function (grunt) {
           style: 'compact'
         },
         files: {                         // Dictionary of files
-          'dist/ui-framework.css': 'src/ui-framework.scss'// 'destination': 'source'
+          'dist/css/ui-framework.css': 'src/ui-framework.scss'// 'destination': 'source'
         }
       }
     },
     combine_mq: {
       default_options: {
         expand: true,
-        cwd: 'dist/',
+        cwd: 'dist/css/',
         src: '*.css',
-        dest: 'dist/'
+        dest: 'dist/css/'
       }
     }
-    // ,
-    // csslint: {
-    //   src: ['dist/*.css'],
-    //   options: {
-    //     'important': false,
-    //     // desconsiderado por conta dos utilities que
-    //     //utilizam important para sobrescrever os estilos
-    //     'adjoining-classes': false,
-    //     // desconsiderado pois é um warning relacionado a incompatibilidade com IE6
-    //     'unique-headings': false,
-    //     // desconsiderado - warning por conta de uma definição OOCSS, de que os
-    //     // headings devem ter o mesmo estilo sempre - e no ui-framework temos
-    //     // font-size e line-height diferentes para larguras de tela menores.
-    //     'font-sizes': false
-    //     //desconsiderado, pois invariavelmente os componentes terão diferentes fontes.
-    //   }
-    // }
   });
   grunt.registerTask('build', [
     'clean:dist',

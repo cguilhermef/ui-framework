@@ -1105,23 +1105,23 @@ Caso de uso:
 }
 
 @font-face {
-  font-family:'Open Sans';src:url("fonts/OpenSans-Light-webfont.woff") format("woff");font-weight:300;font-style:normal;
+  font-family:'Open Sans';src:url("../fonts/OpenSans-Light-webfont.woff") format("woff");font-weight:300;font-style:normal;
 }
 
 @font-face {
-  font-family:'Open Sans';src:url("fonts/OpenSans-Regular-webfont.woff") format("woff");font-weight:400;font-style:normal;
+  font-family:'Open Sans';src:url("../fonts/OpenSans-Regular-webfont.woff") format("woff");font-weight:400;font-style:normal;
 }
 
 @font-face {
-  font-family:'Open Sans';src:url("fonts/OpenSans-Semibold-webfont.woff") format("woff");font-weight:600;font-style:normal;
+  font-family:'Open Sans';src:url("../fonts/OpenSans-Semibold-webfont.woff") format("woff");font-weight:600;font-style:normal;
 }
 
 @font-face {
-  font-family:'Open Sans';src:url("fonts/OpenSans-SemiboldItalic-webfont.woff") format("woff");font-weight:600;font-style:italic;
+  font-family:'Open Sans';src:url("../fonts/OpenSans-SemiboldItalic-webfont.woff") format("woff");font-weight:600;font-style:italic;
 }
 
 @font-face {
-  font-family:'open_sansbold';src:url("OpenSans-Bold-webfont.woff") format("woff");font-weight:700;font-style:normal;
+  font-family:'open_sansbold';src:url("../OpenSans-Bold-webfont.woff") format("woff");font-weight:700;font-style:normal;
 }
 
 @media (min-width: 0) and (max-width: 543px) {

@@ -36,5 +36,12 @@
     "bootstrap": "zeta-labs/bootstrap#v4a5",
     "components-font-awesome": "~4.5.0"
   },
-  "main": "dist/ui-framework.css"
+  "main": [
+    "dist/css/ui-framework.css",
+    "dist/fonts/OpenSans-Bold-webfont.woff",
+    "dist/fonts/OpenSans-Light-webfont.woff",
+    "dist/fonts/OpenSans-Regular-webfont.woff",
+    "dist/fonts/OpenSans-Semibold-webfont.woff",
+    "dist/fonts/OpenSans-Semibolditalic-webfont.woff"
+  ]
 }

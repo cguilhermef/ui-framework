@@ -1,0 +1,37 @@
+.btn-comp {
+  display: block;
+  /** 
+   font-size controla o espaço entre os botões, por serem
+   display: inline-block 
+  */
+  font-size: 0;
+  width: 100%;
+}
+.btn-comp .btn {
+  display: block;
+  margin: 0;
+  min-width: 32px;
+  overflow: hidden;
+  width: 100%;
+}
+.btn-comp .btn-col {
+  display: inline-block;
+  min-width: 32px;
+  vertical-align: middle;
+  width: 100%;
+}
+.btn-comp {
+  .btn-col:first-child:last-child:not(.tiny),
+  .btn-col.wide {
+    width: 100%;
+  }
+  .btn-col,
+  .btn-col.tiny {
+    width: 32.16666%;
+  }
+  .btn-col + .btn-col {
+    margin-left: 1.75%;
+  }
+}
+.btn-comp.align-right { text-align: right; }
+.btn-comp.align-left { text-align: left; }

@@ -1,7 +1,7 @@
 {
   "name": "ui-framework",
   "private": true,
-  "version": "v1.5.2",
+  "version": "v1.6.0",
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
     "grunt": "^0.4.5",

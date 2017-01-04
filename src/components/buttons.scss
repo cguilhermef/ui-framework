@@ -1,4 +1,5 @@
 .btn-comp {
+
   display: block;
   /** 
    font-size controla o espaço entre os botões, por serem
@@ -6,32 +7,84 @@
   */
   font-size: 0;
   width: 100%;
-}
-.btn-comp .btn {
-  display: block;
-  margin: 0;
-  min-width: 32px;
-  overflow: hidden;
-  width: 100%;
-}
-.btn-comp .btn-col {
-  display: inline-block;
-  min-width: 32px;
-  vertical-align: middle;
-  width: 100%;
-}
-.btn-comp {
-  .btn-col:first-child:last-child:not(.tiny),
-  .btn-col.wide {
+
+  .btn {
+    display: block;
+    font-size: 1rem;
+    margin: 0;
+    min-width: 32px;
+    padding: 0.35rem 0.5em;
+    overflow: hidden;
+    width: 100%;
+  }
+  .btn-col {
+    display: inline-block;
+    min-width: 32px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  .btn-col.full {
     width: 100%;
   }
   .btn-col,
-  .btn-col.tiny {
+  .btn-col.small {
     width: 32.16666%;
   }
   .btn-col + .btn-col {
     margin-left: 1.75%;
   }
+  .btn-col.dropdown {
+    position: relative;
+  }
+  .btn-col.dropdown .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+  .btn-col.dropdown .dropdown-toggle::after {
+    display: none;
+  }
+  .btn-col.dropdown > .icon::before {
+    margin-left: 5px;
+  }
+  .btn-col.boxed.dropdown .icon,
+  .btn-col.-slim.dropdown .icon {
+    line-height: 2.4rem;
+  }
+  .btn-col.-boxed.dropdown .icon,
+  .btn-col.slim.dropdown .icon {
+    line-height: 1;
+  }
+  .btn-col.boxed .text,
+  .btn-col.-slim .text { display: block; }
 }
 .btn-comp.align-right { text-align: right; }
 .btn-comp.align-left { text-align: left; }
+
+@each $resolution in map-keys($resolution-list) {
+  @include make-breakpoint($resolution) {
+    .btn-comp {
+      .btn-col.small-#{$resolution} { width: 32.16666%; }
+      .btn-col.full-#{$resolution} { width: 100%; }
+      .btn-col.offset-#{$resolution}-on { margin-left: (32.16666% + (1.75% * 2)); }
+      .btn-col.offset-#{$resolution}-off { margin-left: 0; }
+      .btn-col + .btn-col.offset-#{$resolution}-off { margin-left: 1.75%; }
+      .btn-col.boxed-#{$resolution}.dropdown .icon {
+        line-height: 2.4rem;
+      }
+      .btn-col.slim-#{$resolution}.dropdown .icon {
+        line-height: 1;
+      }
+    }
+  }
+}
+/**
+ * Este trecho especifica que os texto dos botões, quando
+ * dentro de um span.text, serão ocultos a partir da largura 'lg'
+ * deixando de ser 'boxed'
+ */
+@include make-breakpoint(lg) {
+  .btn-comp {
+    .btn-col[class*="boxed"] .text{ display: none; }
+    .btn-col[class*="slim"] .text{ display: inline-block; }
+  }
+}

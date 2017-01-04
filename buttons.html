@@ -32,9 +32,9 @@
         <div class="col-xs-12">
           <div class="view">
             <header class="view-header">
-              <h2 class="view-title">UI-Framework | Buttons</h2>
-              <p class="view-intro">Esta documentação apresenta decisões técnicas tomadas na concepção do UI-Framewor e serve
-                como preview das modificações e adições que são implementadas.
+              <h2 class="view-title">UI-Framework <em>.btn-comp</em></h2>
+              <p class="view-intro">
+                <em>.btn-comp</em> deve gradativamente substituir o <em>.btn-table</em>, sendo mais flexível e com menos bugs. Deve ser usado em <span class="fwb fsi">col-xs-12</span> e <span class="fwb fsi">col-lg-2</span>.
               </p>
             </header>
             <section class="view-body">
@@ -43,42 +43,81 @@
                   <span class="panel-title">Aplicações</span>
                 </h3>
                 <div class="panel-body">
-                  <div class="row half-m-b">
-                    <div class="col-xs-12 col-md-2 offset-md-10">
-                      <div class="btn-comp btn-comp-2">
+                  <div class="row">
+                    <div class="hidden-md-down col-lg-10">
+<pre class="language-html">
+  <code>
+    &lt;-- exemplo de código para três botões com ellipsis --&gt;
+
+    &lt;div class="col-xs-12 col-lg-2 offset-lg-10"&gt;
+      &lt;div class="btn-comp align-right"&gt;
+        &lt;div class="btn-col boxed"&gt;
+          &lt;button class="btn"&gt;
+            &lt;span class="icon fa fa-trash-o"&gt;&lt;/span&gt;
+            &lt;span class="text"&gt;Remover&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="btn-col boxed"&gt;
+          &lt;button class="btn"&gt;
+            &lt;span class="icon fa fa-plus"&gt;&lt;/span&gt;
+            &lt;span class="text"&gt;Adicionar&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="btn-col boxed slim-lg dropdown"&gt;
+          &lt;button type="button"
+            class="btn btn-primary dropdown-toggle"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"&gt;
+            &lt;span class="icon fa fa-ellipsis-v"&gt;&lt;/span&gt;
+          &lt;/button&gt;
+          &lt;div class="dropdown-menu"&gt;
+            &lt;button
+              class="dropdown-item dropdown-item"
+              href="#"&gt;
+              &lt;span class="fa fa-check"&gt;&lt;/span&gt; Option One&lt;/button&gt;
+            &lt;button
+              class="dropdown-item dropdown-item"
+              href="#"&gt;
+              &lt;span class="fa fa-check"&gt;&lt;/span&gt; Option Two&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  </code>
+</pre>
+                    </div>
+                    <div class="col-xs-12 col-lg-2">
+                      <div class="btn-comp m-b">
+                        <div class="btn-col full">
+                          <button class="btn">
+                            <span class="fa fa-plus"></span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="btn-comp m-b">
+                        <div class="btn-col boxed full">
+                          <button class="btn btn-primary">
+                            <span class="icon fa fa-plus"></span>
+                            <span class="text">Adicionar</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="btn-comp m-b">
                         <div class="btn-col">
                           <button class="btn">
                             <span class="fa fa-plus"></span>
                           </button>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="row half-m-b">
-                    <div class="col-xs-12 col-md-2 offset-md-10">
-                      <div class="btn-comp">
-                        <div class="btn-col tiny">
+                      <div class="btn-comp align-right m-b">
+                        <div class="btn-col">
                           <button class="btn">
                             <span class="fa fa-plus"></span>
                           </button>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="row half-m-b">
-                    <div class="col-xs-12 col-md-2 offset-md-10">
-                      <div class="btn-comp align-right">
-                        <div class="btn-col tiny">
-                          <button class="btn">
-                            <span class="fa fa-plus"></span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row half-m-b">
-                    <div class="col-xs-12 col-md-2 offset-md-10">
-                      <div class="btn-comp btn-comp-2">
+                      <div class="btn-comp m-b">
                         <div class="btn-col">
                           <button class="btn">
                             <span class="fa fa-trash-o"></span>
@@ -90,11 +129,7 @@
                           </button>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="row half-m-b">
-                    <div class="col-xs-12 col-md-2 offset-md-10">
-                      <div class="btn-comp btn-comp-2 align-right">
+                      <div class="btn-comp align-right m-b">
                         <div class="btn-col">
                           <button class="btn">
                             <span class="fa fa-trash-o"></span>
@@ -106,11 +141,7 @@
                           </button>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="row half-m-b">
-                    <div class="col-xs-12 col-md-2 offset-md-10">
-                      <div class="btn-comp btn-comp-3">
+                      <div class="btn-comp m-b">
                         <div class="btn-col">
                           <button class="btn">
                             <span class="fa fa-trash-o"></span>
@@ -127,10 +158,96 @@
                           </button>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-xs-12 col-md-2 offset-md-10">
+                      <div class="btn-comp align-right m-b">
+                        <div class="btn-col">
+                          <button class="btn">
+                            <span class="fa fa-trash-o"></span>
+                          </button>
+                        </div>
+                        <div class="btn-col offset-xs-on offset-lg-off">
+                          <button class="btn">
+                            <span class="fa fa-plus"></span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="btn-comp align-right m-b">
+                        <div class="btn-col">
+                          <button class="btn">
+                            <span class="fa fa-trash-o"></span>
+                          </button>
+                        </div>
+                        <div class="btn-col">
+                          <button class="btn">
+                            <span class="fa fa-plus"></span>
+                          </button>
+                        </div>
+                        <div class="btn-col dropdown">
+                          <button type="button"
+                            class="btn btn-primary dropdown-toggle"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false">
+                            <span class="fa fa-ellipsis-v"></span>
+                          </button>
+                          <div class="dropdown-menu">
+                            <button
+                              class="dropdown-item dropdown-item"
+                              href="#">
+                              <span class="fa fa-check"></span> Option One</button>
+                            <button
+                              class="dropdown-item dropdown-item"
+                              href="#">
+                              <span class="fa fa-check"></span> Option Two</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="btn-comp align-right m-b">
+                        <div class="btn-col boxed">
+                          <button class="btn">
+                            <span class="icon fa fa-trash-o"></span>
+                            <span class="text">Remover</span>
+                          </button>
+                        </div>
+                        <div class="btn-col boxed offset-xs-on offset-lg-off">
+                          <button class="btn">
+                            <span class="icon fa fa-plus"></span>
+                            <span class="text">Adicionar</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="btn-comp align-right m-b">
+                        <div class="btn-col boxed">
+                          <button class="btn">
+                            <span class="icon fa fa-trash-o"></span>
+                            <span class="text">Remover</span>
+                          </button>
+                        </div>
+                        <div class="btn-col boxed">
+                          <button class="btn">
+                            <span class="icon fa fa-plus"></span>
+                            <span class="text">Adicionar</span>
+                          </button>
+                        </div>
+                        <div class="btn-col boxed slim-lg dropdown">
+                          <button type="button"
+                            class="btn btn-primary dropdown-toggle"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false">
+                            <span class="icon fa fa-ellipsis-v"></span>
+                          </button>
+                          <div class="dropdown-menu">
+                            <button
+                              class="dropdown-item dropdown-item"
+                              href="#">
+                              <span class="fa fa-check"></span> Option One</button>
+                            <button
+                              class="dropdown-item dropdown-item"
+                              href="#">
+                              <span class="fa fa-check"></span> Option Two</button>
+                          </div>
+                        </div>
+                      </div>
                       <div class="alert alert-info">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                       </div>
@@ -145,6 +262,7 @@
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
     <!-- build:js(.) scripts/vendor.js -->
     <script src="bower_components/prism/prism.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- bower:js -->
     <!-- endbower -->
     <!-- endbuild -->

@@ -7,10 +7,13 @@
   */
   font-size: 0;
   width: 100%;
+  &.align-right { text-align: right; }
+  &.align-left { text-align: left; }
 
   .btn {
     display: block;
-    font-size: 1rem;
+    // font-size: .875rem; /* equivalente a 14px - melhora o aspecto do ellipsis-v */
+    line-height: 1.6rem;
     margin: 0;
     min-width: 32px;
     padding: 0.35rem 0.5em;
@@ -36,29 +39,27 @@
   .btn-col.dropdown {
     position: relative;
   }
+  .btn-col .icon {
+    font-size: 14px;
+    line-height: 1;
+  }
   .btn-col.dropdown .dropdown-menu {
     left: auto;
     right: 0;
   }
+  .btn-col.dropdown.boxed .btn {
+    height: 4.05rem;
+  }
   .btn-col.dropdown .dropdown-toggle::after {
     display: none;
   }
-  .btn-col.dropdown > .icon::before {
-    margin-left: 5px;
-  }
-  .btn-col.boxed.dropdown .icon,
-  .btn-col.-slim.dropdown .icon {
-    line-height: 2.4rem;
-  }
-  .btn-col.-boxed.dropdown .icon,
-  .btn-col.slim.dropdown .icon {
-    line-height: 1;
+  .btn-col.boxed.dropdown .icon {
+    font-size: 28px;
+    vertical-align: middle;
   }
   .btn-col.boxed .text,
   .btn-col.-slim .text { display: block; }
 }
-.btn-comp.align-right { text-align: right; }
-.btn-comp.align-left { text-align: left; }
 
 @each $resolution in map-keys($resolution-list) {
   @include make-breakpoint($resolution) {
@@ -68,10 +69,18 @@
       .btn-col.offset-#{$resolution}-on { margin-left: (32.16666% + (1.75% * 2)); }
       .btn-col.offset-#{$resolution}-off { margin-left: 0; }
       .btn-col + .btn-col.offset-#{$resolution}-off { margin-left: 1.75%; }
+      .btn-col.dropdown.boxed-#{$resolution} .btn {
+        height: 4.05rem;
+      }
+      .btn-col.dropdown.slim-#{$resolution} .btn {
+        height: inherit;
+      }
       .btn-col.boxed-#{$resolution}.dropdown .icon {
-        line-height: 2.4rem;
+        font-size: 28px;
+        vertical-align: middle;
       }
       .btn-col.slim-#{$resolution}.dropdown .icon {
+        font-size: 14px;
         line-height: 1;
       }
     }

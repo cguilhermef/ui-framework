@@ -799,9 +799,17 @@ h6 {
   width: 100%;
 }
 
+.btn-comp.align-right {
+  text-align: right;
+}
+
+.btn-comp.align-left {
+  text-align: left;
+}
+
 .btn-comp .btn {
   display: block;
-  font-size: 1rem;
+  line-height: 1.6rem;
   margin: 0;
   min-width: 32px;
   padding: 0.35rem 0.5em;
@@ -832,37 +840,31 @@ h6 {
   position: relative;
 }
 
+.btn-comp .btn-col .icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
 .btn-comp .btn-col.dropdown .dropdown-menu {
   left: auto;
   right: 0;
+}
+
+.btn-comp .btn-col.dropdown.boxed .btn {
+  height: 4.05rem;
 }
 
 .btn-comp .btn-col.dropdown .dropdown-toggle::after {
   display: none;
 }
 
-.btn-comp .btn-col.dropdown > .icon::before {
-  margin-left: 5px;
-}
-
-.btn-comp .btn-col.boxed.dropdown .icon,.btn-comp .btn-col.-slim.dropdown .icon {
-  line-height: 2.4rem;
-}
-
-.btn-comp .btn-col.-boxed.dropdown .icon,.btn-comp .btn-col.slim.dropdown .icon {
-  line-height: 1;
+.btn-comp .btn-col.boxed.dropdown .icon {
+  font-size: 28px;
+  vertical-align: middle;
 }
 
 .btn-comp .btn-col.boxed .text,.btn-comp .btn-col.-slim .text {
   display: block;
-}
-
-.btn-comp.align-right {
-  text-align: right;
-}
-
-.btn-comp.align-left {
-  text-align: left;
 }
 
 .btn-comp .btn-col.small-xs {
@@ -885,11 +887,21 @@ h6 {
   margin-left: 1.75%;
 }
 
+.btn-comp .btn-col.dropdown.boxed-xs .btn {
+  height: 4.05rem;
+}
+
+.btn-comp .btn-col.dropdown.slim-xs .btn {
+  height: inherit;
+}
+
 .btn-comp .btn-col.boxed-xs.dropdown .icon {
-  line-height: 2.4rem;
+  font-size: 28px;
+  vertical-align: middle;
 }
 
 .btn-comp .btn-col.slim-xs.dropdown .icon {
+  font-size: 14px;
   line-height: 1;
 }/** Este trecho especifica que os texto dos bot├Áes, quando dentro de um span.text, ser├úo ocultos a partir da largura 'lg' deixando de ser 'boxed' *//**
 Caso de uso:
@@ -1604,11 +1616,21 @@ Caso de uso:
     margin-left: 1.75%;
   }
 
+  .btn-comp .btn-col.dropdown.boxed-sm .btn {
+    height: 4.05rem;
+  }
+
+  .btn-comp .btn-col.dropdown.slim-sm .btn {
+    height: inherit;
+  }
+
   .btn-comp .btn-col.boxed-sm.dropdown .icon {
-    line-height: 2.4rem;
+    font-size: 28px;
+    vertical-align: middle;
   }
 
   .btn-comp .btn-col.slim-sm.dropdown .icon {
+    font-size: 14px;
     line-height: 1;
   }
 }
@@ -1971,11 +1993,21 @@ Caso de uso:
     margin-left: 1.75%;
   }
 
+  .btn-comp .btn-col.dropdown.boxed-md .btn {
+    height: 4.05rem;
+  }
+
+  .btn-comp .btn-col.dropdown.slim-md .btn {
+    height: inherit;
+  }
+
   .btn-comp .btn-col.boxed-md.dropdown .icon {
-    line-height: 2.4rem;
+    font-size: 28px;
+    vertical-align: middle;
   }
 
   .btn-comp .btn-col.slim-md.dropdown .icon {
+    font-size: 14px;
     line-height: 1;
   }
 }
@@ -2346,11 +2378,21 @@ Caso de uso:
     margin-left: 1.75%;
   }
 
+  .btn-comp .btn-col.dropdown.boxed-lg .btn {
+    height: 4.05rem;
+  }
+
+  .btn-comp .btn-col.dropdown.slim-lg .btn {
+    height: inherit;
+  }
+
   .btn-comp .btn-col.boxed-lg.dropdown .icon {
-    line-height: 2.4rem;
+    font-size: 28px;
+    vertical-align: middle;
   }
 
   .btn-comp .btn-col.slim-lg.dropdown .icon {
+    font-size: 14px;
     line-height: 1;
   }
 
@@ -2736,11 +2778,21 @@ Caso de uso:
     margin-left: 1.75%;
   }
 
+  .btn-comp .btn-col.dropdown.boxed-xl .btn {
+    height: 4.05rem;
+  }
+
+  .btn-comp .btn-col.dropdown.slim-xl .btn {
+    height: inherit;
+  }
+
   .btn-comp .btn-col.boxed-xl.dropdown .icon {
-    line-height: 2.4rem;
+    font-size: 28px;
+    vertical-align: middle;
   }
 
   .btn-comp .btn-col.slim-xl.dropdown .icon {
+    font-size: 14px;
     line-height: 1;
   }
 }
@@ -3097,11 +3149,21 @@ Caso de uso:
     margin-left: 1.75%;
   }
 
+  .btn-comp .btn-col.dropdown.boxed-hg .btn {
+    height: 4.05rem;
+  }
+
+  .btn-comp .btn-col.dropdown.slim-hg .btn {
+    height: inherit;
+  }
+
   .btn-comp .btn-col.boxed-hg.dropdown .icon {
-    line-height: 2.4rem;
+    font-size: 28px;
+    vertical-align: middle;
   }
 
   .btn-comp .btn-col.slim-hg.dropdown .icon {
+    font-size: 14px;
     line-height: 1;
   }
 }
